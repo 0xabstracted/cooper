@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Set - Metaboss</title>
+        <title>Set - Cooper</title>
 
 
         <!-- Custom HTML head -->
@@ -110,7 +110,7 @@
                         </button>
                     </div>
 
-                    <h1 class="menu-title">Metaboss</h1>
+                    <h1 class="menu-title">Cooper</h1>
 
                     <div class="right-buttons">
                         <a href="print.html" title="Print this book" aria-label="Print this book">
@@ -147,18 +147,18 @@
 <p>Set non-Data struct values for a NFT.</p>
 <h3 id="set-secondary-sale"><a class="header" href="#set-secondary-sale">Set Secondary Sale</a></h3>
 <p>Set <code>primary_sale_happened</code> to be <code>true</code>, enabling secondary sale royalties.</p>
-<pre><code class="language-bash">metaboss set secondary-sale --keypair &lt;PATH_TO_KEYPAIR&gt; --account &lt;MINT_ACCOUNT&gt;
+<pre><code class="language-bash">cooper set secondary-sale --keypair &lt;PATH_TO_KEYPAIR&gt; --account &lt;MINT_ACCOUNT&gt;
 </code></pre>
 <p>Outputs a TxId to the command line so you can check the result.</p>
 <h3 id="set-secondary-sale-all"><a class="header" href="#set-secondary-sale-all">Set Secondary Sale All</a></h3>
 <p>Same as <code>set secondary-sale</code> but takes a mint list instead of a single account file.</p>
 <h3 id="set-update-authority"><a class="header" href="#set-update-authority">Set Update-Authority</a></h3>
 <p>Set <code>update_authority</code> to a different public key.</p>
-<pre><code class="language-bash">metaboss set update-authority --keypair &lt;PATH_TO_KEYPAIR&gt; --account &lt;MINT_ACCOUNT&gt; --new-update-authority &lt;NEW_UPDATE_AUTHORITY&gt;
+<pre><code class="language-bash">cooper set update-authority --keypair &lt;PATH_TO_KEYPAIR&gt; --account &lt;MINT_ACCOUNT&gt; --new-update-authority &lt;NEW_UPDATE_AUTHORITY&gt;
 </code></pre>
 <h3 id="set-update-authority-all"><a class="header" href="#set-update-authority-all">Set Update-Authority-All</a></h3>
 <p>Set <code>update_authority</code> to a different public key for a list of NFTs.</p>
-<pre><code class="language-bash">metaboss set update-authority-all --keypair &lt;PATH_TO_KEYPAIR&gt; --mint-accounts-file &lt;PATH_TO_MINT_ACCOUNTS&gt; --new-update-authority &lt;NEW_UPDATE_AUTHORITY&gt;
+<pre><code class="language-bash">cooper set update-authority-all --keypair &lt;PATH_TO_KEYPAIR&gt; --mint-accounts-file &lt;PATH_TO_MINT_ACCOUNTS&gt; --new-update-authority &lt;NEW_UPDATE_AUTHORITY&gt;
 </code></pre>
 <p>The mint accounts file should be a JSON file with an array of NFT mint accounts to be updated:</p>
 <pre><code class="language-json">[
@@ -169,11 +169,11 @@
 </code></pre>
 <h3 id="set-immutable"><a class="header" href="#set-immutable">Set Immutable</a></h3>
 <p>Set an NFT's <code>Data</code> struct to be immutable. <strong>This is not reversible.</strong></p>
-<pre><code class="language-bash">metaboss set immutable --keypair &lt;PATH_TO_KEYPAIR&gt; --account &lt;MINT_ACCOUNT&gt;
+<pre><code class="language-bash">cooper set immutable --keypair &lt;PATH_TO_KEYPAIR&gt; --account &lt;MINT_ACCOUNT&gt;
 </code></pre>
 <h3 id="set-immutable-all"><a class="header" href="#set-immutable-all">Set Immutable-All</a></h3>
 <p>Set all NFTs in a list to be immutable. <strong>This is not reversible.</strong></p>
-<pre><code class="language-bash">metaboss set immutable-all --keypair &lt;PATH_TO_KEYPAIR&gt; --mint-accounts-file &lt;PATH_TO_MINT_ACCOUNTS&gt;
+<pre><code class="language-bash">cooper set immutable-all --keypair &lt;PATH_TO_KEYPAIR&gt; --mint-accounts-file &lt;PATH_TO_MINT_ACCOUNTS&gt;
 </code></pre>
 
                     </main>

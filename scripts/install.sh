@@ -1,12 +1,12 @@
 #!/bin/bash
 #
-# Metaboss CLI binary installation script
+# Cooper CLI binary installation script
 # ------------------------------------
 #
 # Shamelessly borrowed from Sugar CLI: [https://github.com/metaplex-foundation/sugar/blob/main/script/sugar-install.sh]
 #
 # The purpose of this script is to automate the download and installation
-# of the Metaboss binary.
+# of the Cooper binary.
 #
 # The script does a (simple) platform detection, downloads the binary
 # for the detected platform and copies it to a folder in the PATH variable.
@@ -26,7 +26,7 @@ abort_on_error() {
     fi
 }
 
-CYN  "Metaboss CLI binary installation script"
+CYN  "Cooper CLI binary installation script"
 echo "---------------------------------------"
 echo ""
 
@@ -40,9 +40,9 @@ case "$PROCESSOR" in
     arm* | aarch* | ppc* )
         if [ "$OS_FLAVOUR" != Darwin ]; then
             echo "Binary for $PROCESSOR architecture is not currently supported. Please follow the instructions at:"
-            echo "  => $(CYN https://github.com/samuelvanderwaal/metaboss)"
+            echo "  => $(CYN https://github.com/samuelvanderwaal/cooper)"
             echo ""
-            echo "to build Metaboss from the source code."
+            echo "to build Cooper from the source code."
             exit 1
         fi
         ;;
@@ -52,7 +52,7 @@ case "$PROCESSOR" in
         ;;
 esac
  
-BIN="metaboss"
+BIN="cooper"
 VERSION="ubuntu-latest"
 
 if [ "$OS_FLAVOUR" = Darwin ]; then
@@ -75,14 +75,14 @@ echo "$(CYN "1.") 🖥  $(CYN "Downloading distribution")"
 echo ""
 
 # downloads the distribution file
-REMOTE="https://github.com/samuelvanderwaal/metaboss/releases/latest/download/"
+REMOTE="https://github.com/samuelvanderwaal/cooper/releases/latest/download/"
 curl -L $REMOTE$BIN"-"$DIST --output "$SOURCE/$DIST"
 abort_on_error $?
 
 SIZE=$(wc -c "$SOURCE/$DIST" | grep -oE "[0-9]+" | head -n 1)
 
 if [ $SIZE -eq 0 ]; then
-    RED "Aborting: could not download Metaboss distribution"
+    RED "Aborting: could not download Cooper distribution"
     exit 1
 fi
 
@@ -99,7 +99,7 @@ if [ ! "$(command -v $BIN)" = "" ]; then
     # replace it
     EXISTING="$(which $BIN)"
 
-    echo "Metaboss binary was found at:"
+    echo "Cooper binary was found at:"
     echo "  => $(CYN $EXISTING)"
     echo ""
     echo -n "$(CYN "Replace it? [Y/n]") (default 'n'): "
@@ -146,7 +146,7 @@ else
             echo "  => adding '$TARGET' to 'PATH' variable in '$ENV_FILE'"
             echo "export PATH=\"$HOME/bin:\$PATH\"" >> "$ENV_FILE"
         else
-            echo "  => adding '$TARGET' to 'PATH' variable to execute 'metaboss' from any directory."
+            echo "  => adding '$TARGET' to 'PATH' variable to execute 'cooper' from any directory."
             echo "     - file '$(CYN $ENV_FILE)' was not found"
             echo "" 
             echo -n "$(CYN "Would you like to create '$ENV_FILE'? [Y/n]") (default 'n'): "
@@ -177,7 +177,7 @@ fi
 echo ""
 # sanity check
 if [ "$(command -v $BIN)" = "" ]; then
-    # installation was completed, but Metaboss is not in the PATH
+    # installation was completed, but Cooper is not in the PATH
     echo "✅ $(GRN "Installation complete:") restart your shell to update 'PATH' variable or type '$TARGET/$BIN' to start using it."
 else
     # success

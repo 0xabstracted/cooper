@@ -1,13 +1,13 @@
 ## Derive
 
-### Derive Candy Machine V2 Creator
+### Derive Tars V2 Creator
 
-Derive the candy machine creator PDA from the candy machine id.
+Derive the tars creator PDA from the tars id.
 
 #### Usage
 
 ```bash
-metaboss derive cmv2-creator <candy_machine_id>
+cooper derive tars-creator <tars_id>
 ```
 
 ### Derive Edition
@@ -15,7 +15,7 @@ metaboss derive cmv2-creator <candy_machine_id>
 Derive the edition PDA from the mint account.
 
 ```bash
-metaboss derive edition <mint_account>
+cooper derive edition <mint_account>
 ```
 
 ### Derive Metadata
@@ -23,7 +23,7 @@ metaboss derive edition <mint_account>
 Derive the metadata PDA from the mint account.
 
 ```bash
-metaboss derive metadata <mint_account>
+cooper derive metadata <mint_account>
 ```
 
 ### Derive PDA
@@ -33,5 +33,5 @@ Derive a generic PDA from a list of seeds and a program id.
 #### Usage
 
 ```bash
-metaboss derive pda <seed1>,<seed2>,<seed3> <program_id>
+cooper derive pda <seed1>,<seed2>,<seed3> <program_id>
 ```

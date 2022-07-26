@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Examples - Metaboss</title>
+        <title>Examples - Cooper</title>
 
 
         <!-- Custom HTML head -->
@@ -110,7 +110,7 @@
                         </button>
                     </div>
 
-                    <h1 class="menu-title">Metaboss</h1>
+                    <h1 class="menu-title">Cooper</h1>
 
                     <div class="right-buttons">
                         <a href="print.html" title="Print this book" aria-label="Print this book">
@@ -144,7 +144,7 @@
                     <main>
                         <h2 id="examples"><a class="header" href="#examples">Examples</a></h2>
 <h3 id="update-the-uri-of-an-existing-nft"><a class="header" href="#update-the-uri-of-an-existing-nft">Update the URI of an existing NFT</a></h3>
-<pre><code class="language-bash">metaboss update uri -k ~/.config/solana/devnet.json -a CQNKXw1rw2eWwi812Exk4cKUjKuomZ2156STGRyXd2Mp -u https://arweave.net/N36gZYJ6PEH8OE11i0MppIbPG4VXKV4iuQw1zaq3rls
+<pre><code class="language-bash">cooper update uri -k ~/.config/solana/devnet.json -a CQNKXw1rw2eWwi812Exk4cKUjKuomZ2156STGRyXd2Mp -u https://arweave.net/N36gZYJ6PEH8OE11i0MppIbPG4VXKV4iuQw1zaq3rls
 </code></pre>
 <h3 id="mint-a-new-nft"><a class="header" href="#mint-a-new-nft">Mint a new NFT</a></h3>
 <p>Prepare a JSON file.</p>
@@ -168,11 +168,11 @@
 }
 </code></pre>
 <p>Call command. In this case we do not set <code>--receiver</code> so we mint directly to the <code>keypair</code> address.</p>
-<pre><code class="language-bash">metaboss mint one -k ~/.config/solana/devnet.json -d ./new_nft.json
+<pre><code class="language-bash">cooper mint one -k ~/.config/solana/devnet.json -d ./new_nft.json
 </code></pre>
-<h3 id="snapshot-candy-machine-mint-accounts"><a class="header" href="#snapshot-candy-machine-mint-accounts">Snapshot Candy Machine Mint Accounts</a></h3>
+<h3 id="snapshot-tars-mint-accounts"><a class="header" href="#snapshot-tars-mint-accounts">Snapshot Tars Mint Accounts</a></h3>
 <p>We call the command with no output specified so it creates the file in the current directory.</p>
-<pre><code class="language-bash">metaboss snapshot mints -c BHZWQEtGRMs7voC7vDyVQCXawB1P6UvxG899ATGwxmaR
+<pre><code class="language-bash">cooper snapshot mints -c BHZWQEtGRMs7voC7vDyVQCXawB1P6UvxG899ATGwxmaR
 </code></pre>
 <p>The file <code>BHZWQEtGRMs7voC7vDyVQCXawB1P6UvxG899ATGwxmaR_mint_accounts.json</code> is created with the contents:</p>
 <pre><code class="language-json">[

@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Mint - Metaboss</title>
+        <title>Mint - Cooper</title>
 
 
         <!-- Custom HTML head -->
@@ -110,7 +110,7 @@
                         </button>
                     </div>
 
-                    <h1 class="menu-title">Metaboss</h1>
+                    <h1 class="menu-title">Cooper</h1>
 
                     <div class="right-buttons">
                         <a href="print.html" title="Print this book" aria-label="Print this book">
@@ -148,9 +148,9 @@
 <h3 id="mint-one"><a class="header" href="#mint-one">Mint One</a></h3>
 <p>Mint a single NFT from a JSON file.</p>
 <h4 id="usage"><a class="header" href="#usage">Usage</a></h4>
-<pre><code class="language-bash">metaboss mint one --keypair &lt;KEYPAIR&gt; --nft-data-file &lt;PATH_TO_NFT_DATA_FILE&gt; --receiver &lt;RECEIVER_ADDRESS&gt;
+<pre><code class="language-bash">cooper mint one --keypair &lt;KEYPAIR&gt; --nft-data-file &lt;PATH_TO_NFT_DATA_FILE&gt; --receiver &lt;RECEIVER_ADDRESS&gt;
 </code></pre>
-<pre><code class="language-bash">metaboss mint one --keypair &lt;KEYPAIR&gt; --external-metadata-uri &lt;EXTERNAL_METADATA_URI&gt; --receiver &lt;RECEIVER_ADDRESS&gt; --immutable --primary-sale-happened
+<pre><code class="language-bash">cooper mint one --keypair &lt;KEYPAIR&gt; --external-metadata-uri &lt;EXTERNAL_METADATA_URI&gt; --receiver &lt;RECEIVER_ADDRESS&gt; --immutable --primary-sale-happened
 </code></pre>
 <p>The JSON files should contain all the necessary data required to create an NFT's metadata fields. Creator <code>verified</code> fields must be false unless the creator is also the <code>keypair</code>.</p>
 <p>Example JSON file:</p>
@@ -169,21 +169,21 @@
 }
 </code></pre>
 <p>The --external-metadata-uri option takes a URI to an external metadata file such as an Arweave link pointing to a JSON file.</p>
-<p>If <code>receiver</code> is set, the NFT will be minted directly to the receiver's address, otherwise it is minted to <code>keypair</code>. Observant users may note that with a simple bash script this allows airdrops to be deployed with Metaboss.</p>
+<p>If <code>receiver</code> is set, the NFT will be minted directly to the receiver's address, otherwise it is minted to <code>keypair</code>. Observant users may note that with a simple bash script this allows airdrops to be deployed with Cooper.</p>
 <p>Use the <code>--sign</code> option to sign the metadata with the keypair immediately after minting.</p>
 <h4 id="editions"><a class="header" href="#editions">Editions</a></h4>
-<p>To mint a NFT with the ability to print editions from it use the <code>--max-editions &lt;max-editions&gt;</code> option. This defaults to <code>0</code> meaning no editions are allowed. Setting it to a positive integer means you can print up to that many editions. Setting to a value of <code>-1</code> means unlimited editions. Because of how the CLI interprets the <code>-</code> symbol to set max editions to infinite you should use the <code>=</code> sign for the <code>--max-editions</code> option: <code>metaboss mint one -a &lt;master_account&gt; --max-editions='-1'</code>.</p>
-<p>To mint editions from a master NFT use the<code>metaboss mint editions</code> command to either mint the next <code>n</code> editions sequentially using <code>--next-editions &lt;int&gt;</code> or mint specific edition numbers using <code>--specific-editions &lt;int&gt; &lt;int&gt; &lt;int&gt;</code> with a list of integer edition numbers to mint.</p>
-<p>To find any edition numbers in the sequence that have not been minted use <code>metaboss find missing-editions</code>.</p>
-<p>To find and mint any missing editions and mint them to the authority keypair use <code>metaboss mint missing-editions</code>.</p>
+<p>To mint a NFT with the ability to print editions from it use the <code>--max-editions &lt;max-editions&gt;</code> option. This defaults to <code>0</code> meaning no editions are allowed. Setting it to a positive integer means you can print up to that many editions. Setting to a value of <code>-1</code> means unlimited editions. Because of how the CLI interprets the <code>-</code> symbol to set max editions to infinite you should use the <code>=</code> sign for the <code>--max-editions</code> option: <code>cooper mint one -a &lt;master_account&gt; --max-editions='-1'</code>.</p>
+<p>To mint editions from a master NFT use the<code>cooper mint editions</code> command to either mint the next <code>n</code> editions sequentially using <code>--next-editions &lt;int&gt;</code> or mint specific edition numbers using <code>--specific-editions &lt;int&gt; &lt;int&gt; &lt;int&gt;</code> with a list of integer edition numbers to mint.</p>
+<p>To find any edition numbers in the sequence that have not been minted use <code>cooper find missing-editions</code>.</p>
+<p>To find and mint any missing editions and mint them to the authority keypair use <code>cooper mint missing-editions</code>.</p>
 <p>To find the full list of options for each command use <code>-h</code> or <code>--help</code> as normal.</p>
 <h3 id="mint-list"><a class="header" href="#mint-list">Mint List</a></h3>
 <p>Mint multiple NFTs from a list of JSON files.</p>
 <h4 id="usage-1"><a class="header" href="#usage-1">Usage</a></h4>
-<pre><code class="language-bash">metaboss mint list --keypair &lt;KEYPAIR&gt; --nft-data-dir &lt;PATH_TO_NFT_DATA_FILE&gt; --receiver &lt;RECEIVER_ADDRESS&gt;
+<pre><code class="language-bash">cooper mint list --keypair &lt;KEYPAIR&gt; --nft-data-dir &lt;PATH_TO_NFT_DATA_FILE&gt; --receiver &lt;RECEIVER_ADDRESS&gt;
 </code></pre>
 <p>This command functions the same as <code>mint one</code> except instead of a single JSON file, provide a path to a directory with multiple JSON files, one for each NFT to be minted.</p>
-<pre><code class="language-bash">metaboss mint list --keypair &lt;KEYPAIR&gt; --external-metadata-uris &lt;PATH_TO_JSON_FILE&gt; --receiver &lt;RECEIVER_ADDRESS&gt; --immutable --primary-sale-happened
+<pre><code class="language-bash">cooper mint list --keypair &lt;KEYPAIR&gt; --external-metadata-uris &lt;PATH_TO_JSON_FILE&gt; --receiver &lt;RECEIVER_ADDRESS&gt; --immutable --primary-sale-happened
 </code></pre>
 <p>To mint from URIs provide the path to a JSON file containing a list of URIs.</p>
 <p>By default, new NFTs are minted as mutable, to make them immutable use the <code>--immutable</code> option.</p>

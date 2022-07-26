@@ -30,7 +30,7 @@ v0.3.7
 * Removes string interpolation to be compatible with versions of Rust lower than 1.58
 
 v0.3.6
-* Add withdraw command for candy machine v2
+* Add withdraw command for tars v2
 
 v0.3.5
 * Make timeout, rpc and log-level global options.
@@ -38,13 +38,13 @@ v0.3.5
 * Default to GenesysGo devnet node instead of failing if no rpc provided and no config file found.
 
 v0.3.4
-* Added support for v2 candy machine ids for `sign all`
+* Added support for v2 tars ids for `sign all`
 * Add `burn one` function for burning NFT SPL token and clearing Metadata account.
 
 v0.3.3
 
 * Added exponential backoff retries to network requests: 250 ms, 500 ms, 1000 ms then fails.
-* Added support for snapshot mints and holders commands for v2 candy machine ids.
+* Added support for snapshot mints and holders commands for v2 tars ids.
 * Added `derive` subcommand for deriving PDAs.
 
 v0.3.2

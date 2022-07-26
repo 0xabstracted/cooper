@@ -28,7 +28,7 @@ rm -rf "$WTF_ERROR_DIST"
 touch "$WTF_ERROR_DIST"
 
 
-CYN  "🍬 Metaboss Error Fetching script"
+CYN  "🍬 Cooper Error Fetching script"
 echo "---------------------------------------"
 echo ""
 
@@ -37,7 +37,7 @@ echo ""
 
 download_file "https://raw.githubusercontent.com/project-serum/anchor/master/lang/src/error.rs" "$DOWNLOAD_DIST/anchor-error.rs"
 
-download_file "https://raw.githubusercontent.com/metaplex-foundation/metaplex-program-library/master/candy-machine/program/src/errors.rs" "$DOWNLOAD_DIST/candy-error.rs"
+download_file "https://raw.githubusercontent.com/metaplex-foundation/metaplex-program-library/master/tars/program/src/errors.rs" "$DOWNLOAD_DIST/tars-error.rs"
 
 download_file "https://raw.githubusercontent.com/metaplex-foundation/metaplex-program-library/master/auction-house/program/src/errors.rs" "$DOWNLOAD_DIST/auction-house-error.rs"
 
@@ -48,7 +48,7 @@ download_file "https://raw.githubusercontent.com/metaplex-foundation/metaplex-pr
 echo ""
 echo "$(CYN "2.") 📤  $(CYN "Parsing errors")"
 echo ""
-metaboss parse-errors file -l error
+cooper parse-errors file -l error
 
 cargo fmt --all
 

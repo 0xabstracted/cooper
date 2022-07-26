@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Collections - Metaboss</title>
+        <title>Collections - Cooper</title>
 
 
         <!-- Custom HTML head -->
@@ -110,7 +110,7 @@
                         </button>
                     </div>
 
-                    <h1 class="menu-title">Metaboss</h1>
+                    <h1 class="menu-title">Cooper</h1>
 
                     <div class="right-buttons">
                         <a href="print.html" title="Print this book" aria-label="Print this book">
@@ -147,10 +147,10 @@
 <p>Migrate a collection of NFTs to be part of a single on-chain Metaplex Certified Collection (MCC).</p>
 <ol>
 <li>
-<p>Create your Collection Parent NFT using a minting tool such as <a href="https://justmint.xyz/">justmint</a> or <a href="https://www.nftarmory.me/">NFT Armory</a>. Alternately, use <code>metaboss mint one</code>. This NFT will have your collection name, cover art, description, traits etc. It's the parent NFT for you collection and all items in your collection will point to this mint account.</p>
+<p>Create your Collection Parent NFT using a minting tool such as <a href="https://justmint.xyz/">justmint</a> or <a href="https://www.nftarmory.me/">NFT Armory</a>. Alternately, use <code>cooper mint one</code>. This NFT will have your collection name, cover art, description, traits etc. It's the parent NFT for you collection and all items in your collection will point to this mint account.</p>
 </li>
 <li>
-<p>Get your mint list. If your collection is a single candy machine you can use the <code>--candy-machine-id</code> option, otherwise provide the path to your mint list formatted as a JSON file with the <code>--mint-list</code> option.</p>
+<p>Get your mint list. If your collection is a single tars you can use the <code>--tars-id</code> option, otherwise provide the path to your mint list formatted as a JSON file with the <code>--mint-list</code> option.</p>
 </li>
 </ol>
 <p>Example contents of the mint list file:</p>
@@ -161,25 +161,25 @@
     &quot;4gRtRjrbD7g5ZKUvSVA1tYMK9LZqz6uWuSc3rKeinySh&quot;
 ]
 </code></pre>
-<p>Your Collection Parent NFT must have the <em>same update authority</em> as the items you will put in the collection. If you don't want to connect your update authority keypair to a website, you can mint with a different keypair and then change the update authority with Metaboss, or mint with Metaboss's <code>mint one</code> command. </p>
+<p>Your Collection Parent NFT must have the <em>same update authority</em> as the items you will put in the collection. If you don't want to connect your update authority keypair to a website, you can mint with a different keypair and then change the update authority with Cooper, or mint with Cooper's <code>mint one</code> command. </p>
 <h3 id="running-the-commands"><a class="header" href="#running-the-commands">Running the Commands</a></h3>
-<h4 id="single-candy-machine-collection"><a class="header" href="#single-candy-machine-collection">Single Candy Machine Collection</a></h4>
-<p>Let's say you've created a parent NFT for your collection with a mint address of <code>9wtpdjMysSphxipTSJi7pYWGzSZFm2PRFtQucJiiXUzq</code> and you have a candy machine id of <code>8yuhovH7fb63ed7Q3rcxL3kYZDhps4qspjaxx1N8WSni</code> and your update authority is in the file <code>my_keypair.json</code> in the same directory you are running the command. Your Metaboss command would be:</p>
-<pre><code class="language-bash">metaboss collections migrate -k my_keypair.json -c 8yuhovH7fb63ed7Q3rcxL3kYZDhps4qspjaxx1N8WSni --mint-address 9wtpdjMysSphxipTSJi7pYWGzSZFm2PRFtQucJiiXUzq
+<h4 id="single-tars-collection"><a class="header" href="#single-tars-collection">Single Tars Collection</a></h4>
+<p>Let's say you've created a parent NFT for your collection with a mint address of <code>9wtpdjMysSphxipTSJi7pYWGzSZFm2PRFtQucJiiXUzq</code> and you have a tars id of <code>8yuhovH7fb63ed7Q3rcxL3kYZDhps4qspjaxx1N8WSni</code> and your update authority is in the file <code>my_keypair.json</code> in the same directory you are running the command. Your Cooper command would be:</p>
+<pre><code class="language-bash">cooper collections migrate -k my_keypair.json -c 8yuhovH7fb63ed7Q3rcxL3kYZDhps4qspjaxx1N8WSni --mint-address 9wtpdjMysSphxipTSJi7pYWGzSZFm2PRFtQucJiiXUzq
 </code></pre>
 <h4 id="using-a-mint-list-file"><a class="header" href="#using-a-mint-list-file">Using a Mint List File</a></h4>
-<p>Assume the same scenario above but with a mint list file named &quot;my_mint_list.json&quot; in the same directory you are running the command. Your Metaboss command would be:</p>
-<pre><code class="language-bash">metaboss collections migrate -k my_keypair.json -L my_mint_list.json --mint-address 9wtpdjMysSphxipTSJi7pYWGzSZFm2PRFtQucJiiXUzq
+<p>Assume the same scenario above but with a mint list file named &quot;my_mint_list.json&quot; in the same directory you are running the command. Your Cooper command would be:</p>
+<pre><code class="language-bash">cooper collections migrate -k my_keypair.json -L my_mint_list.json --mint-address 9wtpdjMysSphxipTSJi7pYWGzSZFm2PRFtQucJiiXUzq
 </code></pre>
-<p>This assumes you have your RPC set in your <a href="https://docs.solana.com/cli/choose-a-cluster">Solana config</a>, otherwise it can be passed in with the <code>-r</code> option. As with all Metaboss commands, if you've set your keypair in your Solana config, you can omit the <code>-k</code> option. I recommend setting both in the Solana config to simplify commands:</p>
+<p>This assumes you have your RPC set in your <a href="https://docs.solana.com/cli/choose-a-cluster">Solana config</a>, otherwise it can be passed in with the <code>-r</code> option. As with all Cooper commands, if you've set your keypair in your Solana config, you can omit the <code>-k</code> option. I recommend setting both in the Solana config to simplify commands:</p>
 <pre><code>solana config set --url &lt;rpc url&gt; --keypair &lt;path to keypair file&gt;
 </code></pre>
 <h4 id="retry-flow-and-cache-file"><a class="header" href="#retry-flow-and-cache-file">Retry Flow and Cache File</a></h4>
 <p>The <code>migrate</code> command rapidly fires off a lot of network requests to try to migrate over your collection as quickly as possible. If some of them fail, it keeps track of them and will automatically retry them based on the maximum number of retries you specify with the <code>--retries</code> option. (Defaults to one retry.)</p>
 <p><img src="./images/retry_flow.png" alt="retry flow" /></p>
-<p>If it hits the maximum number of retries with errors remaining, it will write them to the cache file (<code>metaboss-cache-migrate-collections.json</code>). </p>
+<p>If it hits the maximum number of retries with errors remaining, it will write them to the cache file (<code>cooper-cache-migrate-collections.json</code>). </p>
 <p>To retry from a cache file, you can use the <code>--cache-file</code> option.</p>
-<pre><code class="language-metaboss">metaboss collections migrate -k my_keypair.json --cache-file metaboss-cache-migrate-collections.json --mint-address 9wtpdjMysSphxipTSJi7pYWGzSZFm2PRFtQucJiiXUzq
+<pre><code class="language-cooper">cooper collections migrate -k my_keypair.json --cache-file cooper-cache-migrate-collections.json --mint-address 9wtpdjMysSphxipTSJi7pYWGzSZFm2PRFtQucJiiXUzq
 </code></pre>
 <p>This will read the items from the cache file and retry them.</p>
 <p>When retrying, if you consistently end up with the same number being retried each time it probably indicates those items cannot be migrated for some reason. Check the errors on the items that failed to migrate. </p>
@@ -201,22 +201,22 @@
 <h3 id="output-file"><a class="header" href="#output-file">Output File</a></h3>
 <p>Use <code>--output-file</code> or <code>-o</code> to specify the path and name of the JSON file to write the cache results to. </p>
 <p>e.g.:</p>
-<pre><code class="language-bash">metaboss collections migrate -L devnet_test_mints.json -m 9wtpdjMysSphxipTSJi7pYWGzSZFm2PRFtQucJiiXUzq -o ~/Desktop/my-cache3.json
+<pre><code class="language-bash">cooper collections migrate -L devnet_test_mints.json -m 9wtpdjMysSphxipTSJi7pYWGzSZFm2PRFtQucJiiXUzq -o ~/Desktop/my-cache3.json
 </code></pre>
 <p>This will override both the default cache file name ('mb-cache-migrate.json') and the cache file name passed in with <code>--cache-file</code>.</p>
 <h2 id="get-and-check-collection-items"><a class="header" href="#get-and-check-collection-items">Get and Check Collection Items</a></h2>
 <h3 id="get-items"><a class="header" href="#get-items">Get-Items</a></h3>
-<p>Metaboss now has experimental support for getting all collection items from a given mint using off-chain, indexed data from https://theindex.io/. Other indexers or methods may be supported later. To use this feature, you need to sign up for a free account with TheIndex to get an API key.</p>
-<pre><code class="language-bash">metaboss collections get-items --collection-mint &lt;COLLECTION_NFT_MINT_ADDRESS&gt; --api-key &lt;THE_INDEX_API_KEY&gt;
+<p>Cooper now has experimental support for getting all collection items from a given mint using off-chain, indexed data from https://theindex.io/. Other indexers or methods may be supported later. To use this feature, you need to sign up for a free account with TheIndex to get an API key.</p>
+<pre><code class="language-bash">cooper collections get-items --collection-mint &lt;COLLECTION_NFT_MINT_ADDRESS&gt; --api-key &lt;THE_INDEX_API_KEY&gt;
 </code></pre>
 <p>where <code>--collection_mint</code> is the mint account of the parent collection NFT and <code>--api-key</code> is your API Key from theindex.io. There's an additional command <code>--method</code> which can be used to support other indexers in the future but defaults to theindex.io for now so can be elided.</p>
 <p>This command creates a JSON file named <code>&lt;COLLECTION_MINT&gt;_collection_items.json</code> in the directory it is run in. </p>
 <h3 id="check-items"><a class="header" href="#check-items">Check-Items</a></h3>
 <p>Given a list of mint addresses and a collection mint address, this command checks all the items in the list to see if they belong to the specified collection. </p>
-<pre><code class="language-bash">metaboss collections check-items --collection-mint &lt;COLLECTION_NFT_MINT_ADDRESS&gt; -L &lt;PATH_TO_MINT_LIST&gt;
+<pre><code class="language-bash">cooper collections check-items --collection-mint &lt;COLLECTION_NFT_MINT_ADDRESS&gt; -L &lt;PATH_TO_MINT_LIST&gt;
 </code></pre>
 <p>This command has a <code>--debug</code> flag, which creates a JSON file when set with a mapping of all collection NFTs found associated with the list of addresses and which ones belong to each.</p>
-<p>Report bugs and questions to the <a href="https://discord.gg/2f7N25NJkg">Metaboss Discord</a>.</p>
+<p>Report bugs and questions to the <a href="https://discord.gg/2f7N25NJkg">Cooper Discord</a>.</p>
 
                     </main>
 

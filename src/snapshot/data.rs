@@ -12,9 +12,9 @@ pub struct Holder {
 }
 
 #[derive(Debug, Serialize)]
-pub struct CandyMachineProgramAccounts {
+pub struct TarsProgramAccounts {
     pub config_accounts: Vec<ConfigAccount>,
-    pub candy_machine_accounts: Vec<CandyMachineAccount>,
+    pub tars_accounts: Vec<TarsAccount>,
 }
 
 #[derive(Debug, Serialize)]
@@ -24,7 +24,7 @@ pub struct ConfigAccount {
 }
 
 #[derive(Debug, Serialize)]
-pub struct CandyMachineAccount {
+pub struct TarsAccount {
     pub address: String,
     pub data_len: usize,
 }

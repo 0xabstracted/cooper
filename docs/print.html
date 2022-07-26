@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Metaboss</title>
+        <title>Cooper</title>
         <meta name="robots" content="noindex" />
 
 
@@ -111,7 +111,7 @@
                         </button>
                     </div>
 
-                    <h1 class="menu-title">Metaboss</h1>
+                    <h1 class="menu-title">Cooper</h1>
 
                     <div class="right-buttons">
                         <a href="print.html" title="Print this book" aria-label="Print this book">
@@ -143,11 +143,11 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="metaboss"><a class="header" href="#metaboss">Metaboss</a></h1>
-<p><a href="https://github.com/samuelvanderwaal/metaboss"><img src="https://img.shields.io/github/stars/samuelvanderwaal/metaboss?style=social" alt="Stars" /></a>
-<a href="https://github.com/samuelvanderwaal/metaboss"><img src="https://img.shields.io/github/forks/samuelvanderwaal/metaboss?style=social" alt="Forks" /></a>
-<a href="https://crates.io/crates/metaboss"><img src="https://img.shields.io/crates/v/metaboss" alt="Crate" /></a>
-<a href="https://crates.io/crates/metaboss"><img src="https://img.shields.io/crates/d/metaboss" alt="Downloads" /></a></p>
+                        <h1 id="cooper"><a class="header" href="#cooper">Cooper</a></h1>
+<p><a href="https://github.com/samuelvanderwaal/cooper"><img src="https://img.shields.io/github/stars/samuelvanderwaal/cooper?style=social" alt="Stars" /></a>
+<a href="https://github.com/samuelvanderwaal/cooper"><img src="https://img.shields.io/github/forks/samuelvanderwaal/cooper?style=social" alt="Forks" /></a>
+<a href="https://crates.io/crates/cooper"><img src="https://img.shields.io/crates/v/cooper" alt="Crate" /></a>
+<a href="https://crates.io/crates/cooper"><img src="https://img.shields.io/crates/d/cooper" alt="Downloads" /></a></p>
 <p>The Solana Metaplex NFT 'Swiss Army Knife' tool.</p>
 <p>Current supported features:</p>
 <ul>
@@ -164,16 +164,16 @@
 <p>Set <code>update_authorty</code> address on an NFT's metadata</p>
 </li>
 <li>
-<p>Verify a creator by signing the metadata accounts for all tokens in a list, for a given candy machine id or a single mint account</p>
+<p>Verify a creator by signing the metadata accounts for all tokens in a list, for a given tars id or a single mint account</p>
 </li>
 <li>
-<p>Get a snapshot of current NFT holders for a given candy machine ID or update authority</p>
+<p>Get a snapshot of current NFT holders for a given tars ID or update authority</p>
 </li>
 <li>
-<p>Get a list of mint accounts for a given candy machine ID or update authority</p>
+<p>Get a list of mint accounts for a given tars ID or update authority</p>
 </li>
 <li>
-<p>Get a list of all candy machine state and config accounts for a given update authority</p>
+<p>Get a list of all tars state and config accounts for a given update authority</p>
 </li>
 <li>
 <p>Update all metadata Data struct fields for a NFT</p>
@@ -186,28 +186,28 @@
 <p><strong>Note: This is experimental software for a young ecosystem. Use at your own risk. The author is not responsible for misuse of the software or failing to test specific commands before using on production NFTs.</strong></p>
 <h2 id="recommended-way-to-install"><a class="header" href="#recommended-way-to-install">Recommended Way to Install</a></h2>
 <p>For non-technical users, the recommended way to install is to use the install script to install on <strong>MacOs</strong>, <strong>Ubuntu</strong>, or other <strong>Unix-like OS</strong>, by copying the following into a terminal:</p>
-<pre><code>bash &lt;(curl -sSf https://raw.githubusercontent.com/samuelvanderwaal/metaboss/main/scripts/install.sh)
+<pre><code>bash &lt;(curl -sSf https://raw.githubusercontent.com/samuelvanderwaal/cooper/main/scripts/install.sh)
 </code></pre>
-<p>This will download the appropriate binary for your system and install it. Feel free to inspect the install script directly at <a href="https://raw.githubusercontent.com/samuelvanderwaal/metaboss/main/scripts/install.sh">the link</a> to see what you are running before you run the command.</p>
+<p>This will download the appropriate binary for your system and install it. Feel free to inspect the install script directly at <a href="https://raw.githubusercontent.com/samuelvanderwaal/cooper/main/scripts/install.sh">the link</a> to see what you are running before you run the command.</p>
 <p>For <strong>Windows</strong>, either use the prebuilt binary in the following section, or install Windows Subsystem Linux (WSL) to use the Ubuntu terminal to run the above installation script.</p>
-<p>To install WSL on Windows, either run <code>wsl --install -d ubuntu</code> in the cmd prompt terminal, or install &quot;Ubuntu&quot; from the Windows app store. Once you have that set up you can simply run the install script in the WSL terminal. You will then run all your Metaboss commands from WSL as well.</p>
+<p>To install WSL on Windows, either run <code>wsl --install -d ubuntu</code> in the cmd prompt terminal, or install &quot;Ubuntu&quot; from the Windows app store. Once you have that set up you can simply run the install script in the WSL terminal. You will then run all your Cooper commands from WSL as well.</p>
 <h2 id="binaries"><a class="header" href="#binaries">Binaries</a></h2>
-<p>Linux, MacOS and Windows binaries available in <a href="https://github.com/samuelvanderwaal/metaboss/releases">releases</a>, thanks to CI work done by <a href="https://github.com/KartikSoneji">Kartik Soneji</a>.</p>
+<p>Linux, MacOS and Windows binaries available in <a href="https://github.com/samuelvanderwaal/cooper/releases">releases</a>, thanks to CI work done by <a href="https://github.com/KartikSoneji">Kartik Soneji</a>.</p>
 <h2 id="install-from-source"><a class="header" href="#install-from-source">Install From Source</a></h2>
 <p>Install <a href="https://www.rust-lang.org/tools/install">Rust</a>.</p>
 <pre><code class="language-bash">curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 </code></pre>
 <p>Clone the source:</p>
-<pre><code class="language-bash">git clone git@github.com:samuelvanderwaal/metaboss.git
+<pre><code class="language-bash">git clone git@github.com:samuelvanderwaal/cooper.git
 </code></pre>
 <p>or</p>
-<pre><code class="language-bash">git clone https://github.com/samuelvanderwaal/metaboss.git
+<pre><code class="language-bash">git clone https://github.com/samuelvanderwaal/cooper.git
 </code></pre>
 <p>On Ubuntu you may need some additional packages:</p>
 <pre><code>sudo apt install libssl-dev libudev-dev pkg-config
 </code></pre>
 <p>Change directory and check out the <code>main</code> branch:</p>
-<pre><code class="language-bash">cd metaboss
+<pre><code class="language-bash">cd cooper
 git checkout main
 </code></pre>
 <p>Install or build with Rust:</p>
@@ -217,13 +217,13 @@ git checkout main
 <pre><code class="language-bash">cargo build --release
 </code></pre>
 <h2 id="set-up-your-solana-config"><a class="header" href="#set-up-your-solana-config">Set Up Your Solana Config</a></h2>
-<p>If you have the <a href="https://docs.solana.com/cli/install-solana-cli-tools">Solana CLI</a> installed (recommended) you can setup your RPC and keypair so you don't have to pass them into Metaboss:</p>
+<p>If you have the <a href="https://docs.solana.com/cli/install-solana-cli-tools">Solana CLI</a> installed (recommended) you can setup your RPC and keypair so you don't have to pass them into Cooper:</p>
 <pre><code>solana config set --url &lt;rpc url&gt; --keypair &lt;path to keypair file&gt;
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h2 id="quick-start"><a class="header" href="#quick-start">Quick Start</a></h2>
 <h3 id="install-binary"><a class="header" href="#install-binary">Install Binary</a></h3>
 <p>Copy the following to a terminal:</p>
-<pre><code>bash &lt;(curl -sSf https://raw.githubusercontent.com/samuelvanderwaal/metaboss/main/scripts/install.sh)
+<pre><code>bash &lt;(curl -sSf https://raw.githubusercontent.com/samuelvanderwaal/cooper/main/scripts/install.sh)
 </code></pre>
 <p>If you get errors you may need dependencies:</p>
 <p>Ubuntu:</p>
@@ -232,23 +232,23 @@ git checkout main
 <p>MacOS may need openssl:</p>
 <pre><code>brew install openssl@3
 </code></pre>
-<p>Or get the binary yourself: <a href="https://github.com/samuelvanderwaal/metaboss/releases">binary</a>.</p>
+<p>Or get the binary yourself: <a href="https://github.com/samuelvanderwaal/cooper/releases">binary</a>.</p>
 <h3 id="install-with-cargo"><a class="header" href="#install-with-cargo">Install With Cargo</a></h3>
 <p>So you're a Rust dev. . .</p>
-<pre><code class="language-bash">cargo install metaboss
+<pre><code class="language-bash">cargo install cooper
 </code></pre>
 <h3 id="see-usage-commands"><a class="header" href="#see-usage-commands">See Usage Commands</a></h3>
-<pre><code class="language-bash">metaboss -h
+<pre><code class="language-bash">cooper -h
 </code></pre>
 <p>Decode a mint account's metadata:</p>
-<pre><code class="language-bash">metaboss decode mint -a 23gaZq8578xHozMWADsmZ2hAFqZ15iyHmQtRw14meds2
+<pre><code class="language-bash">cooper decode mint -a 23gaZq8578xHozMWADsmZ2hAFqZ15iyHmQtRw14meds2
 </code></pre>
 <p>Get a snapshot of mint accounts by first verified creator:</p>
-<pre><code class="language-bash">metaboss snapshot mint -c PanbgtcTiZ2PveV96t2FHSffiLHXXjMuhvoabUUKKm8
+<pre><code class="language-bash">cooper snapshot mint -c PanbgtcTiZ2PveV96t2FHSffiLHXXjMuhvoabUUKKm8
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h2 id="examples"><a class="header" href="#examples">Examples</a></h2>
 <h3 id="update-the-uri-of-an-existing-nft"><a class="header" href="#update-the-uri-of-an-existing-nft">Update the URI of an existing NFT</a></h3>
-<pre><code class="language-bash">metaboss update uri -k ~/.config/solana/devnet.json -a CQNKXw1rw2eWwi812Exk4cKUjKuomZ2156STGRyXd2Mp -u https://arweave.net/N36gZYJ6PEH8OE11i0MppIbPG4VXKV4iuQw1zaq3rls
+<pre><code class="language-bash">cooper update uri -k ~/.config/solana/devnet.json -a CQNKXw1rw2eWwi812Exk4cKUjKuomZ2156STGRyXd2Mp -u https://arweave.net/N36gZYJ6PEH8OE11i0MppIbPG4VXKV4iuQw1zaq3rls
 </code></pre>
 <h3 id="mint-a-new-nft"><a class="header" href="#mint-a-new-nft">Mint a new NFT</a></h3>
 <p>Prepare a JSON file.</p>
@@ -272,11 +272,11 @@ git checkout main
 }
 </code></pre>
 <p>Call command. In this case we do not set <code>--receiver</code> so we mint directly to the <code>keypair</code> address.</p>
-<pre><code class="language-bash">metaboss mint one -k ~/.config/solana/devnet.json -d ./new_nft.json
+<pre><code class="language-bash">cooper mint one -k ~/.config/solana/devnet.json -d ./new_nft.json
 </code></pre>
-<h3 id="snapshot-candy-machine-mint-accounts"><a class="header" href="#snapshot-candy-machine-mint-accounts">Snapshot Candy Machine Mint Accounts</a></h3>
+<h3 id="snapshot-tars-mint-accounts"><a class="header" href="#snapshot-tars-mint-accounts">Snapshot Tars Mint Accounts</a></h3>
 <p>We call the command with no output specified so it creates the file in the current directory.</p>
-<pre><code class="language-bash">metaboss snapshot mints -c BHZWQEtGRMs7voC7vDyVQCXawB1P6UvxG899ATGwxmaR
+<pre><code class="language-bash">cooper snapshot mints -c BHZWQEtGRMs7voC7vDyVQCXawB1P6UvxG899ATGwxmaR
 </code></pre>
 <p>The file <code>BHZWQEtGRMs7voC7vDyVQCXawB1P6UvxG899ATGwxmaR_mint_accounts.json</code> is created with the contents:</p>
 <pre><code class="language-json">[
@@ -288,44 +288,44 @@ git checkout main
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h2 id="update-list-of-nft-metadata"><a class="header" href="#update-list-of-nft-metadata">Update List of NFT Metadata</a></h2>
 <ol>
-<li>Get your NFT mint list using <code>metaboss snapshot</code> or another tool.</li>
-<li>Decode all the metadata into files using <code>metaboss decode mint -L &lt;NFT_MINT_LIST_FILE&gt; --full -o &lt;DATA_FILES_DIR&gt;</code>.</li>
+<li>Get your NFT mint list using <code>cooper snapshot</code> or another tool.</li>
+<li>Decode all the metadata into files using <code>cooper decode mint -L &lt;NFT_MINT_LIST_FILE&gt; --full -o &lt;DATA_FILES_DIR&gt;</code>.</li>
 <li>Update the specific data you want changed in each file in the <code>&lt;DATA_FILES_DIR&gt;</code>.</li>
-<li>Update the NFTs with <code>metaboss update data-all -d &lt;DATA_FILES_DIR&gt;</code>.</li>
+<li>Update the NFTs with <code>cooper update data-all -d &lt;DATA_FILES_DIR&gt;</code>.</li>
 </ol>
 <p><strong>Note</strong>: many fields have specific <code>update &lt;field&gt;-all</code> commands which are easier to use as they don't require updating a bunch of metadata files manually. Check the <code>update</code> and <code>set</code> sections first to see if they have what you need.</p>
 <div style="break-before: page; page-break-before: always;"></div><h2 id="global-options"><a class="header" href="#global-options">Global Options</a></h2>
 <p>These are the options that apply to all subcommands and can be passed in at any level.</p>
-<pre><code class="language-bash">metaboss &lt;option&gt; &lt;subcommand&gt; &lt;subcommand&gt;
+<pre><code class="language-bash">cooper &lt;option&gt; &lt;subcommand&gt; &lt;subcommand&gt;
 </code></pre>
-<pre><code class="language-bash">metaboss &lt;subcommand&gt; &lt;option&gt; &lt;subcommand&gt;
+<pre><code class="language-bash">cooper &lt;subcommand&gt; &lt;option&gt; &lt;subcommand&gt;
 </code></pre>
-<pre><code class="language-bash">metaboss &lt;subcommand&gt; &lt;subcommand&gt; &lt;option&gt;
+<pre><code class="language-bash">cooper &lt;subcommand&gt; &lt;subcommand&gt; &lt;option&gt;
 </code></pre>
 <h2 id="options"><a class="header" href="#options">Options</a></h2>
 <p>-r, --rpc <rpc> The RPC endpoint to use for commands.</p>
-<p>Metaboss will try to read your Solana config settings for both the RPC endpoint and also the Commitment setting by reading from <code>$HOME/.config/solana/cli/config.yml</code>. If it can't find a config file it defaults to using <code>https://psytrbhymqlkfrhudd.dev.genesysgo.net:8899/</code> and <code>confirmed</code>.</p>
-<p>Running Metaboss with the <code>--rpc</code> option will override the above with whatever RPC endpoint the user provides.</p>
+<p>Cooper will try to read your Solana config settings for both the RPC endpoint and also the Commitment setting by reading from <code>$HOME/.config/solana/cli/config.yml</code>. If it can't find a config file it defaults to using <code>https://psytrbhymqlkfrhudd.dev.genesysgo.net:8899/</code> and <code>confirmed</code>.</p>
+<p>Running Cooper with the <code>--rpc</code> option will override the above with whatever RPC endpoint the user provides.</p>
 <p>-t, --timeout <timeout> The timeout in seconds to use for RPC calls.</p>
 <p>This defaults to 90 seconds which should be fine for most cases but can be overriden if needed.</p>
 <p>Example:</p>
-<pre><code class="language-bash">metaboss snapshot holders -r https://ssc-dao.genesysgo.net/ -t 120 -u DC2mkgwhy56w3viNtHDjJQmc7SGu2QX785bS4aexojwX
+<pre><code class="language-bash">cooper snapshot holders -r https://ssc-dao.genesysgo.net/ -t 120 -u DC2mkgwhy56w3viNtHDjJQmc7SGu2QX785bS4aexojwX
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h2 id="burn"><a class="header" href="#burn">Burn</a></h2>
 <h3 id="burn-one"><a class="header" href="#burn-one">Burn One</a></h3>
 <p>Burn a single NFT by burning the SPL token and closing the associated token account. If the keypair is also the NFT <code>update_authority</code> this will set the metadata account to blank/default values.</p>
 <h4 id="usage"><a class="header" href="#usage">Usage</a></h4>
-<pre><code class="language-bash">metaboss burn one -k &lt;OWNER_KEYPAIR&gt; --account &lt;MINT_ACCOUNT&gt;
+<pre><code class="language-bash">cooper burn one -k &lt;OWNER_KEYPAIR&gt; --account &lt;MINT_ACCOUNT&gt;
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="collections"><a class="header" href="#collections">Collections</a></h1>
 <h2 id="migrate"><a class="header" href="#migrate">Migrate</a></h2>
 <p>Migrate a collection of NFTs to be part of a single on-chain Metaplex Certified Collection (MCC).</p>
 <ol>
 <li>
-<p>Create your Collection Parent NFT using a minting tool such as <a href="https://justmint.xyz/">justmint</a> or <a href="https://www.nftarmory.me/">NFT Armory</a>. Alternately, use <code>metaboss mint one</code>. This NFT will have your collection name, cover art, description, traits etc. It's the parent NFT for you collection and all items in your collection will point to this mint account.</p>
+<p>Create your Collection Parent NFT using a minting tool such as <a href="https://justmint.xyz/">justmint</a> or <a href="https://www.nftarmory.me/">NFT Armory</a>. Alternately, use <code>cooper mint one</code>. This NFT will have your collection name, cover art, description, traits etc. It's the parent NFT for you collection and all items in your collection will point to this mint account.</p>
 </li>
 <li>
-<p>Get your mint list. If your collection is a single candy machine you can use the <code>--candy-machine-id</code> option, otherwise provide the path to your mint list formatted as a JSON file with the <code>--mint-list</code> option.</p>
+<p>Get your mint list. If your collection is a single tars you can use the <code>--tars-id</code> option, otherwise provide the path to your mint list formatted as a JSON file with the <code>--mint-list</code> option.</p>
 </li>
 </ol>
 <p>Example contents of the mint list file:</p>
@@ -336,25 +336,25 @@ git checkout main
     &quot;4gRtRjrbD7g5ZKUvSVA1tYMK9LZqz6uWuSc3rKeinySh&quot;
 ]
 </code></pre>
-<p>Your Collection Parent NFT must have the <em>same update authority</em> as the items you will put in the collection. If you don't want to connect your update authority keypair to a website, you can mint with a different keypair and then change the update authority with Metaboss, or mint with Metaboss's <code>mint one</code> command. </p>
+<p>Your Collection Parent NFT must have the <em>same update authority</em> as the items you will put in the collection. If you don't want to connect your update authority keypair to a website, you can mint with a different keypair and then change the update authority with Cooper, or mint with Cooper's <code>mint one</code> command. </p>
 <h3 id="running-the-commands"><a class="header" href="#running-the-commands">Running the Commands</a></h3>
-<h4 id="single-candy-machine-collection"><a class="header" href="#single-candy-machine-collection">Single Candy Machine Collection</a></h4>
-<p>Let's say you've created a parent NFT for your collection with a mint address of <code>9wtpdjMysSphxipTSJi7pYWGzSZFm2PRFtQucJiiXUzq</code> and you have a candy machine id of <code>8yuhovH7fb63ed7Q3rcxL3kYZDhps4qspjaxx1N8WSni</code> and your update authority is in the file <code>my_keypair.json</code> in the same directory you are running the command. Your Metaboss command would be:</p>
-<pre><code class="language-bash">metaboss collections migrate -k my_keypair.json -c 8yuhovH7fb63ed7Q3rcxL3kYZDhps4qspjaxx1N8WSni --mint-address 9wtpdjMysSphxipTSJi7pYWGzSZFm2PRFtQucJiiXUzq
+<h4 id="single-tars-collection"><a class="header" href="#single-tars-collection">Single Tars Collection</a></h4>
+<p>Let's say you've created a parent NFT for your collection with a mint address of <code>9wtpdjMysSphxipTSJi7pYWGzSZFm2PRFtQucJiiXUzq</code> and you have a tars id of <code>8yuhovH7fb63ed7Q3rcxL3kYZDhps4qspjaxx1N8WSni</code> and your update authority is in the file <code>my_keypair.json</code> in the same directory you are running the command. Your Cooper command would be:</p>
+<pre><code class="language-bash">cooper collections migrate -k my_keypair.json -c 8yuhovH7fb63ed7Q3rcxL3kYZDhps4qspjaxx1N8WSni --mint-address 9wtpdjMysSphxipTSJi7pYWGzSZFm2PRFtQucJiiXUzq
 </code></pre>
 <h4 id="using-a-mint-list-file"><a class="header" href="#using-a-mint-list-file">Using a Mint List File</a></h4>
-<p>Assume the same scenario above but with a mint list file named &quot;my_mint_list.json&quot; in the same directory you are running the command. Your Metaboss command would be:</p>
-<pre><code class="language-bash">metaboss collections migrate -k my_keypair.json -L my_mint_list.json --mint-address 9wtpdjMysSphxipTSJi7pYWGzSZFm2PRFtQucJiiXUzq
+<p>Assume the same scenario above but with a mint list file named &quot;my_mint_list.json&quot; in the same directory you are running the command. Your Cooper command would be:</p>
+<pre><code class="language-bash">cooper collections migrate -k my_keypair.json -L my_mint_list.json --mint-address 9wtpdjMysSphxipTSJi7pYWGzSZFm2PRFtQucJiiXUzq
 </code></pre>
-<p>This assumes you have your RPC set in your <a href="https://docs.solana.com/cli/choose-a-cluster">Solana config</a>, otherwise it can be passed in with the <code>-r</code> option. As with all Metaboss commands, if you've set your keypair in your Solana config, you can omit the <code>-k</code> option. I recommend setting both in the Solana config to simplify commands:</p>
+<p>This assumes you have your RPC set in your <a href="https://docs.solana.com/cli/choose-a-cluster">Solana config</a>, otherwise it can be passed in with the <code>-r</code> option. As with all Cooper commands, if you've set your keypair in your Solana config, you can omit the <code>-k</code> option. I recommend setting both in the Solana config to simplify commands:</p>
 <pre><code>solana config set --url &lt;rpc url&gt; --keypair &lt;path to keypair file&gt;
 </code></pre>
 <h4 id="retry-flow-and-cache-file"><a class="header" href="#retry-flow-and-cache-file">Retry Flow and Cache File</a></h4>
 <p>The <code>migrate</code> command rapidly fires off a lot of network requests to try to migrate over your collection as quickly as possible. If some of them fail, it keeps track of them and will automatically retry them based on the maximum number of retries you specify with the <code>--retries</code> option. (Defaults to one retry.)</p>
 <p><img src="./images/retry_flow.png" alt="retry flow" /></p>
-<p>If it hits the maximum number of retries with errors remaining, it will write them to the cache file (<code>metaboss-cache-migrate-collections.json</code>). </p>
+<p>If it hits the maximum number of retries with errors remaining, it will write them to the cache file (<code>cooper-cache-migrate-collections.json</code>). </p>
 <p>To retry from a cache file, you can use the <code>--cache-file</code> option.</p>
-<pre><code class="language-metaboss">metaboss collections migrate -k my_keypair.json --cache-file metaboss-cache-migrate-collections.json --mint-address 9wtpdjMysSphxipTSJi7pYWGzSZFm2PRFtQucJiiXUzq
+<pre><code class="language-cooper">cooper collections migrate -k my_keypair.json --cache-file cooper-cache-migrate-collections.json --mint-address 9wtpdjMysSphxipTSJi7pYWGzSZFm2PRFtQucJiiXUzq
 </code></pre>
 <p>This will read the items from the cache file and retry them.</p>
 <p>When retrying, if you consistently end up with the same number being retried each time it probably indicates those items cannot be migrated for some reason. Check the errors on the items that failed to migrate. </p>
@@ -376,30 +376,30 @@ git checkout main
 <h3 id="output-file"><a class="header" href="#output-file">Output File</a></h3>
 <p>Use <code>--output-file</code> or <code>-o</code> to specify the path and name of the JSON file to write the cache results to. </p>
 <p>e.g.:</p>
-<pre><code class="language-bash">metaboss collections migrate -L devnet_test_mints.json -m 9wtpdjMysSphxipTSJi7pYWGzSZFm2PRFtQucJiiXUzq -o ~/Desktop/my-cache3.json
+<pre><code class="language-bash">cooper collections migrate -L devnet_test_mints.json -m 9wtpdjMysSphxipTSJi7pYWGzSZFm2PRFtQucJiiXUzq -o ~/Desktop/my-cache3.json
 </code></pre>
 <p>This will override both the default cache file name ('mb-cache-migrate.json') and the cache file name passed in with <code>--cache-file</code>.</p>
 <h2 id="get-and-check-collection-items"><a class="header" href="#get-and-check-collection-items">Get and Check Collection Items</a></h2>
 <h3 id="get-items"><a class="header" href="#get-items">Get-Items</a></h3>
-<p>Metaboss now has experimental support for getting all collection items from a given mint using off-chain, indexed data from https://theindex.io/. Other indexers or methods may be supported later. To use this feature, you need to sign up for a free account with TheIndex to get an API key.</p>
-<pre><code class="language-bash">metaboss collections get-items --collection-mint &lt;COLLECTION_NFT_MINT_ADDRESS&gt; --api-key &lt;THE_INDEX_API_KEY&gt;
+<p>Cooper now has experimental support for getting all collection items from a given mint using off-chain, indexed data from https://theindex.io/. Other indexers or methods may be supported later. To use this feature, you need to sign up for a free account with TheIndex to get an API key.</p>
+<pre><code class="language-bash">cooper collections get-items --collection-mint &lt;COLLECTION_NFT_MINT_ADDRESS&gt; --api-key &lt;THE_INDEX_API_KEY&gt;
 </code></pre>
 <p>where <code>--collection_mint</code> is the mint account of the parent collection NFT and <code>--api-key</code> is your API Key from theindex.io. There's an additional command <code>--method</code> which can be used to support other indexers in the future but defaults to theindex.io for now so can be elided.</p>
 <p>This command creates a JSON file named <code>&lt;COLLECTION_MINT&gt;_collection_items.json</code> in the directory it is run in. </p>
 <h3 id="check-items"><a class="header" href="#check-items">Check-Items</a></h3>
 <p>Given a list of mint addresses and a collection mint address, this command checks all the items in the list to see if they belong to the specified collection. </p>
-<pre><code class="language-bash">metaboss collections check-items --collection-mint &lt;COLLECTION_NFT_MINT_ADDRESS&gt; -L &lt;PATH_TO_MINT_LIST&gt;
+<pre><code class="language-bash">cooper collections check-items --collection-mint &lt;COLLECTION_NFT_MINT_ADDRESS&gt; -L &lt;PATH_TO_MINT_LIST&gt;
 </code></pre>
 <p>This command has a <code>--debug</code> flag, which creates a JSON file when set with a mapping of all collection NFTs found associated with the list of addresses and which ones belong to each.</p>
-<p>Report bugs and questions to the <a href="https://discord.gg/2f7N25NJkg">Metaboss Discord</a>.</p>
+<p>Report bugs and questions to the <a href="https://discord.gg/2f7N25NJkg">Cooper Discord</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h2 id="decode"><a class="header" href="#decode">Decode</a></h2>
 <h3 id="decode-mint"><a class="header" href="#decode-mint">Decode Mint</a></h3>
 <p>Decodes a mint account's metadata into a JSON file. It accepts either a single account or a list of accounts.</p>
 <h4 id="usage-1"><a class="header" href="#usage-1">Usage</a></h4>
-<pre><code class="language-bash">metaboss decode mint --account &lt;MINT_ACCOUNT&gt; -o &lt;OUPUT_DIRECTORY&gt;
+<pre><code class="language-bash">cooper decode mint --account &lt;MINT_ACCOUNT&gt; -o &lt;OUPUT_DIRECTORY&gt;
 </code></pre>
 <p>The command will write the metadata JSON file to the output directory with the mint account as the name: e.g. <code>CQNKXw1rw2eWwi812Exk4cKUjKuomZ2156STGRyXd2Mp.json</code>. The output option defaults to the current directory.</p>
-<pre><code class="language-bash">metaboss decode mint --list-file &lt;LIST_FILE&gt; -o &lt;OUPUT_DIRECTORY&gt;
+<pre><code class="language-bash">cooper decode mint --list-file &lt;LIST_FILE&gt; -o &lt;OUPUT_DIRECTORY&gt;
 </code></pre>
 <p>The JSON list file should be an array of mint accounts to be decoded:</p>
 <pre><code class="language-json">[&quot;xSy...&quot;, &quot;Cnb...&quot; ...]
@@ -408,61 +408,61 @@ git checkout main
 <p>As of v0.4.0, the default output will only be the <code>Data</code> struct matching the input format of the <code>update data</code> and <code>update data-all</code> commands. To get the full <code>Metadata</code> struct, use the <code>--full</code> option.</p>
 <p>Use <code>--raw</code> to get the account data as raw bytes for debugging purposes.</p>
 <div style="break-before: page; page-break-before: always;"></div><h2 id="derive"><a class="header" href="#derive">Derive</a></h2>
-<h3 id="derive-candy-machine-v2-creator"><a class="header" href="#derive-candy-machine-v2-creator">Derive Candy Machine V2 Creator</a></h3>
-<p>Derive the candy machine creator PDA from the candy machine id.</p>
+<h3 id="derive-tars-v2-creator"><a class="header" href="#derive-tars-v2-creator">Derive Tars V2 Creator</a></h3>
+<p>Derive the tars creator PDA from the tars id.</p>
 <h4 id="usage-2"><a class="header" href="#usage-2">Usage</a></h4>
-<pre><code class="language-bash">metaboss derive cmv2-creator &lt;candy_machine_id&gt;
+<pre><code class="language-bash">cooper derive tars-creator &lt;tars_id&gt;
 </code></pre>
 <h3 id="derive-edition"><a class="header" href="#derive-edition">Derive Edition</a></h3>
 <p>Derive the edition PDA from the mint account.</p>
-<pre><code class="language-bash">metaboss derive edition &lt;mint_account&gt;
+<pre><code class="language-bash">cooper derive edition &lt;mint_account&gt;
 </code></pre>
 <h3 id="derive-metadata"><a class="header" href="#derive-metadata">Derive Metadata</a></h3>
 <p>Derive the metadata PDA from the mint account.</p>
-<pre><code class="language-bash">metaboss derive metadata &lt;mint_account&gt;
+<pre><code class="language-bash">cooper derive metadata &lt;mint_account&gt;
 </code></pre>
 <h3 id="derive-pda"><a class="header" href="#derive-pda">Derive PDA</a></h3>
 <p>Derive a generic PDA from a list of seeds and a program id.</p>
 <h4 id="usage-3"><a class="header" href="#usage-3">Usage</a></h4>
-<pre><code class="language-bash">metaboss derive pda &lt;seed1&gt;,&lt;seed2&gt;,&lt;seed3&gt; &lt;program_id&gt;
+<pre><code class="language-bash">cooper derive pda &lt;seed1&gt;,&lt;seed2&gt;,&lt;seed3&gt; &lt;program_id&gt;
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h2 id="find"><a class="header" href="#find">Find</a></h2>
 <h3 id="error"><a class="header" href="#error">Error</a></h3>
 <p>Look up Metaplex program error codes by hex or decimal values. </p>
 <p>E.g.:</p>
-<pre><code class="language-bash">metaboss find error 0x1770
+<pre><code class="language-bash">cooper find error 0x1770
 </code></pre>
 <p>or </p>
-<pre><code class="language-bash">metaboss find error 6000
+<pre><code class="language-bash">cooper find error 6000
 </code></pre>
 <p>returns:</p>
 <pre><code class="language-bash">Auction House | PublicKeyMismatch: PublicKeyMismatch
 Auctioneer |    BumpSeedNotInHashMap: Bump seed not in hash map
-Candy Machine | IncorrectOwner: Account does not have correct owner!
+Tars | IncorrectOwner: Account does not have correct owner!
 </code></pre>
 <p>Currently supported programs:</p>
 <ul>
 <li>Token Metadata </li>
 <li>Auction House</li>
 <li>Auctioneer</li>
-<li>Candy Machine</li>
+<li>Tars</li>
 </ul>
 <p>It also decodes Anchor specific errors.</p>
-<pre><code class="language-bash">metaboss find 3000
+<pre><code class="language-bash">cooper find 3000
 </code></pre>
 <pre><code>Anchor Program |        AccountDiscriminatorAlreadySet: The account discriminator was already set on this account
 </code></pre>
 <h3 id="missing-editions"><a class="header" href="#missing-editions">Missing Editions</a></h3>
-<p>Find any edition numbers in the sequence that have not been minted. See [editions][https://metaboss.rs/mint.html#editions] for more details on how to interact with editions with Metaboss.</p>
+<p>Find any edition numbers in the sequence that have not been minted. See [editions][https://cooper.rs/mint.html#editions] for more details on how to interact with editions with Cooper.</p>
 <div style="break-before: page; page-break-before: always;"></div><h2 id="mint"><a class="header" href="#mint">Mint</a></h2>
 <p>Mint new NFTs from JSON files. </p>
 <p>For both subcommands the <code>--immutable</code> flag sets the NFT data to be immutable and the <code>--primary-sale-happened</code> flag sets the primary sale happened bool to true.</p>
 <h3 id="mint-one"><a class="header" href="#mint-one">Mint One</a></h3>
 <p>Mint a single NFT from a JSON file.</p>
 <h4 id="usage-4"><a class="header" href="#usage-4">Usage</a></h4>
-<pre><code class="language-bash">metaboss mint one --keypair &lt;KEYPAIR&gt; --nft-data-file &lt;PATH_TO_NFT_DATA_FILE&gt; --receiver &lt;RECEIVER_ADDRESS&gt;
+<pre><code class="language-bash">cooper mint one --keypair &lt;KEYPAIR&gt; --nft-data-file &lt;PATH_TO_NFT_DATA_FILE&gt; --receiver &lt;RECEIVER_ADDRESS&gt;
 </code></pre>
-<pre><code class="language-bash">metaboss mint one --keypair &lt;KEYPAIR&gt; --external-metadata-uri &lt;EXTERNAL_METADATA_URI&gt; --receiver &lt;RECEIVER_ADDRESS&gt; --immutable --primary-sale-happened
+<pre><code class="language-bash">cooper mint one --keypair &lt;KEYPAIR&gt; --external-metadata-uri &lt;EXTERNAL_METADATA_URI&gt; --receiver &lt;RECEIVER_ADDRESS&gt; --immutable --primary-sale-happened
 </code></pre>
 <p>The JSON files should contain all the necessary data required to create an NFT's metadata fields. Creator <code>verified</code> fields must be false unless the creator is also the <code>keypair</code>.</p>
 <p>Example JSON file:</p>
@@ -481,21 +481,21 @@ Candy Machine | IncorrectOwner: Account does not have correct owner!
 }
 </code></pre>
 <p>The --external-metadata-uri option takes a URI to an external metadata file such as an Arweave link pointing to a JSON file.</p>
-<p>If <code>receiver</code> is set, the NFT will be minted directly to the receiver's address, otherwise it is minted to <code>keypair</code>. Observant users may note that with a simple bash script this allows airdrops to be deployed with Metaboss.</p>
+<p>If <code>receiver</code> is set, the NFT will be minted directly to the receiver's address, otherwise it is minted to <code>keypair</code>. Observant users may note that with a simple bash script this allows airdrops to be deployed with Cooper.</p>
 <p>Use the <code>--sign</code> option to sign the metadata with the keypair immediately after minting.</p>
 <h4 id="editions"><a class="header" href="#editions">Editions</a></h4>
-<p>To mint a NFT with the ability to print editions from it use the <code>--max-editions &lt;max-editions&gt;</code> option. This defaults to <code>0</code> meaning no editions are allowed. Setting it to a positive integer means you can print up to that many editions. Setting to a value of <code>-1</code> means unlimited editions. Because of how the CLI interprets the <code>-</code> symbol to set max editions to infinite you should use the <code>=</code> sign for the <code>--max-editions</code> option: <code>metaboss mint one -a &lt;master_account&gt; --max-editions='-1'</code>.</p>
-<p>To mint editions from a master NFT use the<code>metaboss mint editions</code> command to either mint the next <code>n</code> editions sequentially using <code>--next-editions &lt;int&gt;</code> or mint specific edition numbers using <code>--specific-editions &lt;int&gt; &lt;int&gt; &lt;int&gt;</code> with a list of integer edition numbers to mint.</p>
-<p>To find any edition numbers in the sequence that have not been minted use <code>metaboss find missing-editions</code>.</p>
-<p>To find and mint any missing editions and mint them to the authority keypair use <code>metaboss mint missing-editions</code>.</p>
+<p>To mint a NFT with the ability to print editions from it use the <code>--max-editions &lt;max-editions&gt;</code> option. This defaults to <code>0</code> meaning no editions are allowed. Setting it to a positive integer means you can print up to that many editions. Setting to a value of <code>-1</code> means unlimited editions. Because of how the CLI interprets the <code>-</code> symbol to set max editions to infinite you should use the <code>=</code> sign for the <code>--max-editions</code> option: <code>cooper mint one -a &lt;master_account&gt; --max-editions='-1'</code>.</p>
+<p>To mint editions from a master NFT use the<code>cooper mint editions</code> command to either mint the next <code>n</code> editions sequentially using <code>--next-editions &lt;int&gt;</code> or mint specific edition numbers using <code>--specific-editions &lt;int&gt; &lt;int&gt; &lt;int&gt;</code> with a list of integer edition numbers to mint.</p>
+<p>To find any edition numbers in the sequence that have not been minted use <code>cooper find missing-editions</code>.</p>
+<p>To find and mint any missing editions and mint them to the authority keypair use <code>cooper mint missing-editions</code>.</p>
 <p>To find the full list of options for each command use <code>-h</code> or <code>--help</code> as normal.</p>
 <h3 id="mint-list"><a class="header" href="#mint-list">Mint List</a></h3>
 <p>Mint multiple NFTs from a list of JSON files.</p>
 <h4 id="usage-5"><a class="header" href="#usage-5">Usage</a></h4>
-<pre><code class="language-bash">metaboss mint list --keypair &lt;KEYPAIR&gt; --nft-data-dir &lt;PATH_TO_NFT_DATA_FILE&gt; --receiver &lt;RECEIVER_ADDRESS&gt;
+<pre><code class="language-bash">cooper mint list --keypair &lt;KEYPAIR&gt; --nft-data-dir &lt;PATH_TO_NFT_DATA_FILE&gt; --receiver &lt;RECEIVER_ADDRESS&gt;
 </code></pre>
 <p>This command functions the same as <code>mint one</code> except instead of a single JSON file, provide a path to a directory with multiple JSON files, one for each NFT to be minted.</p>
-<pre><code class="language-bash">metaboss mint list --keypair &lt;KEYPAIR&gt; --external-metadata-uris &lt;PATH_TO_JSON_FILE&gt; --receiver &lt;RECEIVER_ADDRESS&gt; --immutable --primary-sale-happened
+<pre><code class="language-bash">cooper mint list --keypair &lt;KEYPAIR&gt; --external-metadata-uris &lt;PATH_TO_JSON_FILE&gt; --receiver &lt;RECEIVER_ADDRESS&gt; --immutable --primary-sale-happened
 </code></pre>
 <p>To mint from URIs provide the path to a JSON file containing a list of URIs.</p>
 <p>By default, new NFTs are minted as mutable, to make them immutable use the <code>--immutable</code> option.</p>
@@ -505,18 +505,18 @@ Candy Machine | IncorrectOwner: Account does not have correct owner!
 <p>Set non-Data struct values for a NFT.</p>
 <h3 id="set-secondary-sale"><a class="header" href="#set-secondary-sale">Set Secondary Sale</a></h3>
 <p>Set <code>primary_sale_happened</code> to be <code>true</code>, enabling secondary sale royalties.</p>
-<pre><code class="language-bash">metaboss set secondary-sale --keypair &lt;PATH_TO_KEYPAIR&gt; --account &lt;MINT_ACCOUNT&gt;
+<pre><code class="language-bash">cooper set secondary-sale --keypair &lt;PATH_TO_KEYPAIR&gt; --account &lt;MINT_ACCOUNT&gt;
 </code></pre>
 <p>Outputs a TxId to the command line so you can check the result.</p>
 <h3 id="set-secondary-sale-all"><a class="header" href="#set-secondary-sale-all">Set Secondary Sale All</a></h3>
 <p>Same as <code>set secondary-sale</code> but takes a mint list instead of a single account file.</p>
 <h3 id="set-update-authority"><a class="header" href="#set-update-authority">Set Update-Authority</a></h3>
 <p>Set <code>update_authority</code> to a different public key.</p>
-<pre><code class="language-bash">metaboss set update-authority --keypair &lt;PATH_TO_KEYPAIR&gt; --account &lt;MINT_ACCOUNT&gt; --new-update-authority &lt;NEW_UPDATE_AUTHORITY&gt;
+<pre><code class="language-bash">cooper set update-authority --keypair &lt;PATH_TO_KEYPAIR&gt; --account &lt;MINT_ACCOUNT&gt; --new-update-authority &lt;NEW_UPDATE_AUTHORITY&gt;
 </code></pre>
 <h3 id="set-update-authority-all"><a class="header" href="#set-update-authority-all">Set Update-Authority-All</a></h3>
 <p>Set <code>update_authority</code> to a different public key for a list of NFTs.</p>
-<pre><code class="language-bash">metaboss set update-authority-all --keypair &lt;PATH_TO_KEYPAIR&gt; --mint-accounts-file &lt;PATH_TO_MINT_ACCOUNTS&gt; --new-update-authority &lt;NEW_UPDATE_AUTHORITY&gt;
+<pre><code class="language-bash">cooper set update-authority-all --keypair &lt;PATH_TO_KEYPAIR&gt; --mint-accounts-file &lt;PATH_TO_MINT_ACCOUNTS&gt; --new-update-authority &lt;NEW_UPDATE_AUTHORITY&gt;
 </code></pre>
 <p>The mint accounts file should be a JSON file with an array of NFT mint accounts to be updated:</p>
 <pre><code class="language-json">[
@@ -527,11 +527,11 @@ Candy Machine | IncorrectOwner: Account does not have correct owner!
 </code></pre>
 <h3 id="set-immutable"><a class="header" href="#set-immutable">Set Immutable</a></h3>
 <p>Set an NFT's <code>Data</code> struct to be immutable. <strong>This is not reversible.</strong></p>
-<pre><code class="language-bash">metaboss set immutable --keypair &lt;PATH_TO_KEYPAIR&gt; --account &lt;MINT_ACCOUNT&gt;
+<pre><code class="language-bash">cooper set immutable --keypair &lt;PATH_TO_KEYPAIR&gt; --account &lt;MINT_ACCOUNT&gt;
 </code></pre>
 <h3 id="set-immutable-all"><a class="header" href="#set-immutable-all">Set Immutable-All</a></h3>
 <p>Set all NFTs in a list to be immutable. <strong>This is not reversible.</strong></p>
-<pre><code class="language-bash">metaboss set immutable-all --keypair &lt;PATH_TO_KEYPAIR&gt; --mint-accounts-file &lt;PATH_TO_MINT_ACCOUNTS&gt;
+<pre><code class="language-bash">cooper set immutable-all --keypair &lt;PATH_TO_KEYPAIR&gt; --mint-accounts-file &lt;PATH_TO_MINT_ACCOUNTS&gt;
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h2 id="sign"><a class="header" href="#sign">Sign</a></h2>
 <p><strong>Warning: These commands modify your NFT and are for advanced users. Use with caution.</strong></p>
@@ -539,23 +539,23 @@ Candy Machine | IncorrectOwner: Account does not have correct owner!
 <h3 id="sign-one"><a class="header" href="#sign-one">Sign One</a></h3>
 <p>Sign the metadata for a single mint account.</p>
 <h4 id="usage-6"><a class="header" href="#usage-6">Usage</a></h4>
-<pre><code class="language-bash">metaboss sign one --keypair &lt;PATH_TO_KEYPAIR&gt; --account &lt;MINT_ACCOUNT&gt;
+<pre><code class="language-bash">cooper sign one --keypair &lt;PATH_TO_KEYPAIR&gt; --account &lt;MINT_ACCOUNT&gt;
 </code></pre>
 <p>Outputs a TxId to the command line so you can check the result.</p>
 <h3 id="sign-all"><a class="header" href="#sign-all">Sign All</a></h3>
-<p>Sign all metadata from a JSON list or for a given first verified creator. First verified creator can be the candy machine creator id or whatever the first verified creator in the creators array is for your NFTs.</p>
+<p>Sign all metadata from a JSON list or for a given first verified creator. First verified creator can be the tars creator id or whatever the first verified creator in the creators array is for your NFTs.</p>
 <h4 id="usage-7"><a class="header" href="#usage-7">Usage</a></h4>
-<pre><code class="language-bash">metaboss sign all --keypair &lt;PATH_TO_KEYPAIR&gt; --creator &lt;FIRST_CREATOR&gt;
+<pre><code class="language-bash">cooper sign all --keypair &lt;PATH_TO_KEYPAIR&gt; --creator &lt;FIRST_CREATOR&gt;
 </code></pre>
-<p><strong>For candy machine v2, you can add the <code>--v2</code> option when using it with the candy machine id.</strong>
-Candy machine v2 has a separate creator id from the candy machine account id. </p>
-<pre><code class="language-bash">metaboss sign all --keypair &lt;PATH_TO_KEYPAIR&gt; --creator &lt;CANDY_MACHINE_ID&gt; --v2
+<p><strong>For tars v2, you can add the <code>--v2</code> option when using it with the tars id.</strong>
+Tars v2 has a separate creator id from the tars account id. </p>
+<pre><code class="language-bash">cooper sign all --keypair &lt;PATH_TO_KEYPAIR&gt; --creator &lt;TARS_ID&gt; --v2
 </code></pre>
-<p>or you can use the candy machine creator id which will be the first creator in the creators array.</p>
-<pre><code class="language-bash">metaboss sign all --keypair &lt;PATH_TO_KEYPAIR&gt; --creator &lt;CANDY_MACHINE_CREATOR_ID&gt;
+<p>or you can use the tars creator id which will be the first creator in the creators array.</p>
+<pre><code class="language-bash">cooper sign all --keypair &lt;PATH_TO_KEYPAIR&gt; --creator &lt;TARS_CREATOR_ID&gt;
 </code></pre>
 <p>With a mint acconts JSON list:</p>
-<pre><code class="language-bash">metaboss sign all --keypair &lt;PATH_TO_KEYPAIR&gt; --mint-accounts-file &lt;PATH_TO_MINT_ACCOUNTS_FILE&gt;
+<pre><code class="language-bash">cooper sign all --keypair &lt;PATH_TO_KEYPAIR&gt; --mint-accounts-file &lt;PATH_TO_MINT_ACCOUNTS_FILE&gt;
 </code></pre>
 <p>For the latter usage, the mint accounts file should be a JSON file with a list of mint accounts to be signed:</p>
 <pre><code class="language-json">[
@@ -568,11 +568,11 @@ Candy machine v2 has a separate creator id from the candy machine account id. </
 <div style="break-before: page; page-break-before: always;"></div><h2 id="snapshot"><a class="header" href="#snapshot">Snapshot</a></h2>
 <p>Get snapshots of various blockchain states.</p>
 <h3 id="snapshot-cm-accounts"><a class="header" href="#snapshot-cm-accounts">Snapshot CM-Accounts</a></h3>
-<p>Snapshot all candy machine config and state accounts for a given update_authority.</p>
+<p>Snapshot all tars config and state accounts for a given update_authority.</p>
 <h4 id="usage-8"><a class="header" href="#usage-8">Usage</a></h4>
-<pre><code class="language-bash">metaboss snapshot cm-accounts --update-authority &lt;UPDATE_AUTHORITY&gt; --output &lt;OUTPUT_DIR&gt;
+<pre><code class="language-bash">cooper snapshot cm-accounts --update-authority &lt;UPDATE_AUTHORITY&gt; --output &lt;OUTPUT_DIR&gt;
 </code></pre>
-<p>Creates a JSON file in the output directory with the name format of <code>&lt;UPDATE_AUTHORITY&gt;_accounts.json</code>, consisting of an object with the fields <code>config_accounts</code> and <code>candy_machine_accounts</code>:</p>
+<p>Creates a JSON file in the output directory with the name format of <code>&lt;UPDATE_AUTHORITY&gt;_accounts.json</code>, consisting of an object with the fields <code>config_accounts</code> and <code>tars_accounts</code>:</p>
 <pre><code class="language-json">{
     &quot;config_accounts&quot;: [
         {
@@ -584,7 +584,7 @@ Candy machine v2 has a separate creator id from the candy machine account id. </
             &quot;data_len&quot;: 1216
         }
     ],
-    &quot;candy_machine_accounts&quot;: [
+    &quot;tars_accounts&quot;: [
         {
             &quot;address&quot;: &quot;DwoPaGFxJpGRq3kZQBNfBroCGaS9Hdg2rpFHJpD2iBhW&quot;,
             &quot;data_len&quot;: 529
@@ -597,20 +597,20 @@ Candy machine v2 has a separate creator id from the candy machine account id. </
 }
 </code></pre>
 <h3 id="snapshot-holders"><a class="header" href="#snapshot-holders">Snapshot Holders</a></h3>
-<p>Snapshot all current holders of NFTs filtered by verified candy_machine_id/first creator or update_authority.
+<p>Snapshot all current holders of NFTs filtered by verified tars_id/first creator or update_authority.
 <strong>Note:</strong> Update authority can be faked so use that option with caution.</p>
 <h4 id="usage-9"><a class="header" href="#usage-9">Usage</a></h4>
-<pre><code class="language-bash">metaboss snapshot holders --creator &lt;CREATOR_ADDRESS&gt; -p &lt;POSITION&gt; --output &lt;OUTPUT_DIR&gt;
+<pre><code class="language-bash">cooper snapshot holders --creator &lt;CREATOR_ADDRESS&gt; -p &lt;POSITION&gt; --output &lt;OUTPUT_DIR&gt;
 </code></pre>
 <p>Use the positon to indicate which creator in the creators array to filter by; defaults to the first one (position 0).</p>
 <p>or</p>
-<pre><code class="language-bash">metaboss snapshot holders --update-authority &lt;UPDATE_AUTHORITY&gt; --output &lt;OUTPUT_DIR&gt;
+<pre><code class="language-bash">cooper snapshot holders --update-authority &lt;UPDATE_AUTHORITY&gt; --output &lt;OUTPUT_DIR&gt;
 </code></pre>
-<p><strong>For candy machine v2, you can add the <code>--v2</code> option when using it with candy machine id.</strong>
-Candy machine v2 has a separate creator id from the candy machine account id. </p>
-<pre><code class="language-bash">metaboss snapshot holders --creator &lt;CANDY_MACHINE_ID&gt; --v2 --output &lt;OUTPUT_DIR&gt;
+<p><strong>For tars v2, you can add the <code>--v2</code> option when using it with tars id.</strong>
+Tars v2 has a separate creator id from the tars account id. </p>
+<pre><code class="language-bash">cooper snapshot holders --creator &lt;TARS_ID&gt; --v2 --output &lt;OUTPUT_DIR&gt;
 </code></pre>
-<p>where &lt;CANDY_MACHINE_ID&gt; is the candy machine id retrieved from the cache file.</p>
+<p>where &lt;TARS_ID&gt; is the tars id retrieved from the cache file.</p>
 <p>Creates a JSON file in the output directory with the name format of <code>&lt;CREATOR/UPDATE_AUTHORITY&gt;_holders.json</code> consisting of an array of objects with the following fields:</p>
 <ul>
 <li>owner wallet -- the holder of the token</li>
@@ -629,20 +629,20 @@ Candy machine v2 has a separate creator id from the candy machine account id. </
 ]
 </code></pre>
 <h3 id="snapshot-mints"><a class="header" href="#snapshot-mints">Snapshot Mints</a></h3>
-<p>Snapshot all mint accounts for a given verified candy machine id/first creator or update authority</p>
+<p>Snapshot all mint accounts for a given verified tars id/first creator or update authority</p>
 <h4 id="usage-10"><a class="header" href="#usage-10">Usage</a></h4>
-<pre><code class="language-bash">metaboss snapshot mints --creator &lt;FIRST_CREATOR&gt; --output &lt;OUTPUT_DIR&gt;
+<pre><code class="language-bash">cooper snapshot mints --creator &lt;FIRST_CREATOR&gt; --output &lt;OUTPUT_DIR&gt;
 </code></pre>
 <p>Use the positon to indicate which creator in the creators array to filter by; defaults to the first one (position 0).</p>
 <p>or</p>
-<pre><code class="language-bash">metaboss snapshot mints --update-authority &lt;UPDATE_AUTHORITY&gt; --output &lt;OUTPUT_DIR&gt;
+<pre><code class="language-bash">cooper snapshot mints --update-authority &lt;UPDATE_AUTHORITY&gt; --output &lt;OUTPUT_DIR&gt;
 </code></pre>
-<p><strong>For candy machine v2, you can add the <code>--v2</code> option when using it with candy machine id.</strong>
-Candy machine v2 has a separate creator id from the candy machine account id.</p>
-<pre><code class="language-bash">metaboss snapshot mints --creator &lt;CANDY_MACHINE_ID&gt; --v2 --output &lt;OUTPUT_DIR&gt;
+<p><strong>For tars v2, you can add the <code>--v2</code> option when using it with tars id.</strong>
+Tars v2 has a separate creator id from the tars account id.</p>
+<pre><code class="language-bash">cooper snapshot mints --creator &lt;TARS_ID&gt; --v2 --output &lt;OUTPUT_DIR&gt;
 </code></pre>
-<p>where &lt;CANDY_MACHINE_ID&gt; is the candy machine id retrieved from the cache file.</p>
-<p>Creates a JSON file in the output directory with the name format of <code>&lt;CANDY_MACHINE_ID/UPDATE_AUTHORITY&gt;_mint_accounts.json</code> consisting of an array of mint accounts.</p>
+<p>where &lt;TARS_ID&gt; is the tars id retrieved from the cache file.</p>
+<p>Creates a JSON file in the output directory with the name format of <code>&lt;TARS_ID/UPDATE_AUTHORITY&gt;_mint_accounts.json</code> consisting of an array of mint accounts.</p>
 <pre><code class="language-json">[
     &quot;CQNKXw1rw2eWwi812Exk4cKUjKuomZ2156STGRyXd2Mp&quot;,
     &quot;5pgGJ5npeMxBzTiQctDgoofEVGSwZMYm3QMz4F4NDShz&quot;,
@@ -650,14 +650,14 @@ Candy machine v2 has a separate creator id from the candy machine account id.</p
 ]
 </code></pre>
 <h3 id="indexed-data"><a class="header" href="#indexed-data">Indexed Data</a></h3>
-<p>Metaboss now has experimental support for running snapshot commands using off-chain, indexed data from https://theindex.io/. Other indexers or methods may be supported later. To use this feature, you need to sign up for a free account with TheIndex to get an API key.</p>
+<p>Cooper now has experimental support for running snapshot commands using off-chain, indexed data from https://theindex.io/. Other indexers or methods may be supported later. To use this feature, you need to sign up for a free account with TheIndex to get an API key.</p>
 <h3 id="snapshot-indexed-mints"><a class="header" href="#snapshot-indexed-mints">Snapshot Indexed Mints</a></h3>
 <h4 id="usage-11"><a class="header" href="#usage-11">Usage</a></h4>
-<pre><code class="language-bash">metaboss snapshot indexed-mints --creator &lt;FIRST_VERIFIED_CREATOR&gt; --api-key &lt;THEINDEX.IO_API_KEY&gt;
+<pre><code class="language-bash">cooper snapshot indexed-mints --creator &lt;FIRST_VERIFIED_CREATOR&gt; --api-key &lt;THEINDEX.IO_API_KEY&gt;
 </code></pre>
 <h3 id="snapshot-indexed-holders"><a class="header" href="#snapshot-indexed-holders">Snapshot Indexed Holders</a></h3>
 <h4 id="usage-12"><a class="header" href="#usage-12">Usage</a></h4>
-<pre><code class="language-bash">metaboss snapshot indexed-holders --creator &lt;FIRST_VERIFIED_CREATOR&gt; --api-key &lt;THEINDEX.IO_API_KEY&gt;
+<pre><code class="language-bash">cooper snapshot indexed-holders --creator &lt;FIRST_VERIFIED_CREATOR&gt; --api-key &lt;THEINDEX.IO_API_KEY&gt;
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h2 id="update"><a class="header" href="#update">Update</a></h2>
 <p><strong>Warning: These commands modify your NFT and are for advanced users. Use with caution.</strong></p>
@@ -666,9 +666,9 @@ Candy machine v2 has a separate creator id from the candy machine account id.</p
 <h3 id="update-data"><a class="header" href="#update-data">Update Data</a></h3>
 <p>Update the <code>Data</code> struct on a NFT from a JSON file.</p>
 <h4 id="usage-13"><a class="header" href="#usage-13">Usage</a></h4>
-<pre><code class="language-bash">metaboss update data --keypair &lt;PATH_TO_KEYPAIR&gt; --account &lt;MINT_ACCOUNT&gt; --new-data-file &lt;PATH_TO_NEW_DATA_FILE&gt;
+<pre><code class="language-bash">cooper update data --keypair &lt;PATH_TO_KEYPAIR&gt; --account &lt;MINT_ACCOUNT&gt; --new-data-file &lt;PATH_TO_NEW_DATA_FILE&gt;
 </code></pre>
-<p>The JSON file should include all the fields of the metadata <code>Data</code> struct and should match <code>creator</code> <code>verified</code> bools for existing creators. E.g. if your NFT was minted by the Metaplex Candy Machine program, and you wish to keep your candy machine as a verified creator <em>you must add the candy machine to your creators array with <code>verified</code> set to <code>true</code></em>.</p>
+<p>The JSON file should include all the fields of the metadata <code>Data</code> struct and should match <code>creator</code> <code>verified</code> bools for existing creators. E.g. if your NFT was minted by the Metaplex Tars program, and you wish to keep your tars as a verified creator <em>you must add the tars to your creators array with <code>verified</code> set to <code>true</code></em>.</p>
 <p>Note: The on-chain <code>Data</code> struct is <em>different</em> than the external metadata stored at the link in the <code>uri</code> field so make you understand the difference before running this command.</p>
 <p><strong>Make sure you understand how the Metaplex Metadata <code>Data</code> struct works and how this command will affect your NFT. Always test on <code>devnet</code> before running on mainnet.</strong></p>
 <pre><code class="language-json">{
@@ -678,7 +678,7 @@ Candy machine v2 has a separate creator id from the candy machine account id.</p
     &quot;seller_fee_basis_points&quot;: 100,
     &quot;creators&quot;: [
         {
-            &quot;address&quot;: &quot;&lt;YOUR_CANDY_MACHINE_ID&gt;&quot;,
+            &quot;address&quot;: &quot;&lt;YOUR_TARS_ID&gt;&quot;,
             &quot;verified&quot;: true,
             &quot;share&quot;: 0
         },
@@ -699,9 +699,9 @@ Candy machine v2 has a separate creator id from the candy machine account id.</p
 <h3 id="update-data-all"><a class="header" href="#update-data-all">Update Data All</a></h3>
 <p>Update the <code>Data</code> struct on a list of NFTs from JSON files.</p>
 <h4 id="usage-14"><a class="header" href="#usage-14">Usage</a></h4>
-<pre><code class="language-bash">metaboss update data-all --keypair &lt;PATH_TO_KEYPAIR&gt; --data-dir &lt;PATH_TO_DATA_DIR&gt;
+<pre><code class="language-bash">cooper update data-all --keypair &lt;PATH_TO_KEYPAIR&gt; --data-dir &lt;PATH_TO_DATA_DIR&gt;
 </code></pre>
-<p>Each JSON file in the data directory should include the mint account and all the fields of the metadata <code>Data</code> struct and should match <code>creator</code> <code>verified</code> bools for existing creators. E.g. if your NFT was minted by the Metaplex Candy Machine program, and you wish to keep your candy machine as a verified creator <em>you must add the candy machine to your creators array with <code>verified</code> set to <code>true</code></em>.</p>
+<p>Each JSON file in the data directory should include the mint account and all the fields of the metadata <code>Data</code> struct and should match <code>creator</code> <code>verified</code> bools for existing creators. E.g. if your NFT was minted by the Metaplex Tars program, and you wish to keep your tars as a verified creator <em>you must add the tars to your creators array with <code>verified</code> set to <code>true</code></em>.</p>
 <p>Note: The on-chain <code>Data</code> struct is <em>different</em> than the external metadata stored at the link in the <code>uri</code> field so make you understand the difference before running this command.</p>
 <p><strong>Make sure you understand how the Metaplex Metadata <code>Data</code> struct works and how this command will affect your NFT. Always test on <code>devnet</code> before running on mainnet.</strong></p>
 <pre><code class="language-json">{
@@ -714,7 +714,7 @@ Candy machine v2 has a separate creator id from the candy machine account id.</p
     &quot;seller_fee_basis_points&quot;: 100,
     &quot;creators&quot;: [
         {
-            &quot;address&quot;: &quot;&lt;YOUR_CANDY_MACHINE_ID&gt;&quot;,
+            &quot;address&quot;: &quot;&lt;YOUR_TARS_ID&gt;&quot;,
             &quot;verified&quot;: true,
             &quot;share&quot;: 0
         },
@@ -735,41 +735,41 @@ Candy machine v2 has a separate creator id from the candy machine account id.</p
 <h3 id="update-name"><a class="header" href="#update-name">Update Name</a></h3>
 <p>Update the on-chain name of a NFT, keeping the rest of the <code>Data</code> struct the same.</p>
 <h4 id="usage-15"><a class="header" href="#usage-15">Usage</a></h4>
-<pre><code class="language-bash"> metaboss update name --keypair &lt;PATH_TO_KEYPAIR&gt; --account &lt;MINT_ACCOUNT&gt; --new-name &lt;NEW_NAME&gt;
+<pre><code class="language-bash"> cooper update name --keypair &lt;PATH_TO_KEYPAIR&gt; --account &lt;MINT_ACCOUNT&gt; --new-name &lt;NEW_NAME&gt;
 </code></pre>
 <h3 id="update-symbol"><a class="header" href="#update-symbol">Update Symbol</a></h3>
 <p>Update the on-chain symbol of a NFT, keeping the rest of the <code>Data</code> struct the same.</p>
 <h4 id="usage-16"><a class="header" href="#usage-16">Usage</a></h4>
-<pre><code class="language-bash"> metaboss update symbol --keypair &lt;PATH_TO_KEYPAIR&gt; --account &lt;MINT_ACCOUNT&gt; --new-symbol &lt;NEW_SYMBOL&gt;
+<pre><code class="language-bash"> cooper update symbol --keypair &lt;PATH_TO_KEYPAIR&gt; --account &lt;MINT_ACCOUNT&gt; --new-symbol &lt;NEW_SYMBOL&gt;
 </code></pre>
 <h3 id="update-symbol-all"><a class="header" href="#update-symbol-all">Update Symbol All</a></h3>
 <p>Update the on-chain symbol of a list of NFTs, keeping the rest of the <code>Data</code> struct the same.</p>
 <h4 id="usage-17"><a class="header" href="#usage-17">Usage</a></h4>
-<pre><code class="language-bash"> metaboss update symbol-all --keypair &lt;PATH_TO_KEYPAIR&gt; -L &lt;PATH_TO_LIST_MINT_ADDRESSES&gt; --new-symbol &lt;NEW_SYMBOL&gt;
+<pre><code class="language-bash"> cooper update symbol-all --keypair &lt;PATH_TO_KEYPAIR&gt; -L &lt;PATH_TO_LIST_MINT_ADDRESSES&gt; --new-symbol &lt;NEW_SYMBOL&gt;
 </code></pre>
 <h3 id="update-creators"><a class="header" href="#update-creators">Update Creators</a></h3>
 <p>Update the creators of a NFT, keeping the rest of the <code>Data</code> struct the same.</p>
 <h4 id="usage-18"><a class="header" href="#usage-18">Usage</a></h4>
-<pre><code class="language-bash">metaboss update creators -k &lt;PATH_TO_KEYPAIR&gt; -a &lt;MINT_ACCOUNT&gt; -c &lt;CREATOR1:SHARE:VERIFIED,CREATOR2:SHARE:VERIFIED&gt;
+<pre><code class="language-bash">cooper update creators -k &lt;PATH_TO_KEYPAIR&gt; -a &lt;MINT_ACCOUNT&gt; -c &lt;CREATOR1:SHARE:VERIFIED,CREATOR2:SHARE:VERIFIED&gt;
 </code></pre>
 <p>Creators should be a comma-delimited list of creator:share:verified. E.g. </p>
 <p>Example:</p>
-<pre><code class="language-bash">metaboss update creators -k ~/.config/solana/devnet.json -a 4rxTT8pKeYFrFgNBgTspBWVEnMnsAZGwChkjRUtP4Xpi -c 42NevAWA6A8m9prDvZRUYReQmhNC3NtSZQNFUppPJDRB:70:false,AVdBTNhDqYgXGaaVkqiaUJ1Yqa61hMiFFaVRtqwzs5GZ:30:false
+<pre><code class="language-bash">cooper update creators -k ~/.config/solana/devnet.json -a 4rxTT8pKeYFrFgNBgTspBWVEnMnsAZGwChkjRUtP4Xpi -c 42NevAWA6A8m9prDvZRUYReQmhNC3NtSZQNFUppPJDRB:70:false,AVdBTNhDqYgXGaaVkqiaUJ1Yqa61hMiFFaVRtqwzs5GZ:30:false
 </code></pre>
 <p>Using the <code>--append</code> flag will set the shares to 0 and append to the existing creators list, otherwise the creators are overwritten with the list you pass in.</p>
 <h3 id="update-creators-all"><a class="header" href="#update-creators-all">Update Creators All</a></h3>
 <p>Same as update creators but takes a mint list instead of a single account.</p>
-<pre><code class="language-bash">metaboss update creators-all  -k ~/.config/solana/devnet.json -L mints.json -c 42NevAWA6A8m9prDvZRUYReQmhNC3NtSZQNFUppPJDRB:70:false,AVdBTNhDqYgXGaaVkqiaUJ1Yqa61hMiFFaVRtqwzs5GZ:30:false
+<pre><code class="language-bash">cooper update creators-all  -k ~/.config/solana/devnet.json -L mints.json -c 42NevAWA6A8m9prDvZRUYReQmhNC3NtSZQNFUppPJDRB:70:false,AVdBTNhDqYgXGaaVkqiaUJ1Yqa61hMiFFaVRtqwzs5GZ:30:false
 </code></pre>
 <h3 id="update-uri"><a class="header" href="#update-uri">Update URI</a></h3>
 <p>Update the metadata URI, keeping the rest of the <code>Data</code> struct the same.</p>
 <h4 id="usage-19"><a class="header" href="#usage-19">Usage</a></h4>
-<pre><code class="language-bash">metaboss update uri --keypair &lt;PATH_TO_KEYPAIR&gt; --account &lt;MINT_ACCOUNT&gt; --new-uri &lt;NEW_URI&gt;
+<pre><code class="language-bash">cooper update uri --keypair &lt;PATH_TO_KEYPAIR&gt; --account &lt;MINT_ACCOUNT&gt; --new-uri &lt;NEW_URI&gt;
 </code></pre>
 <h3 id="update-uri-all"><a class="header" href="#update-uri-all">Update URI All</a></h3>
 <p>Update the metadata URI for a list of mint accounts, keeping the rest of the <code>Data</code> struct the same.</p>
 <h4 id="usage-20"><a class="header" href="#usage-20">Usage</a></h4>
-<pre><code class="language-bash">metaboss update uri-all --keypair &lt;PATH_TO_KEYPAIR&gt; --json-file &lt;PATH_TO_JSON_FILE&gt;
+<pre><code class="language-bash">cooper update uri-all --keypair &lt;PATH_TO_KEYPAIR&gt; --json-file &lt;PATH_TO_JSON_FILE&gt;
 </code></pre>
 <pre><code class="language-json">[
     {
@@ -785,21 +785,21 @@ Candy machine v2 has a separate creator id from the candy machine account id.</p
 <h3 id="update-seller-fee-basis-points"><a class="header" href="#update-seller-fee-basis-points">Update Seller Fee Basis Points</a></h3>
 <p>Update the seller fee basis points field on an NFT, keeping the rest of the <code>Data</code> struct the same.</p>
 <h4 id="usage-21"><a class="header" href="#usage-21">Usage</a></h4>
-<pre><code class="language-bash">metaboss update sfbp --keypair &lt;PATH_TO_KEYPAIR&gt; -a &lt;MINT_ACCOUNT&gt; -n &lt;NEW_SELLER_FEE_BASIS_POINTS_VALUE&gt;
+<pre><code class="language-bash">cooper update sfbp --keypair &lt;PATH_TO_KEYPAIR&gt; -a &lt;MINT_ACCOUNT&gt; -n &lt;NEW_SELLER_FEE_BASIS_POINTS_VALUE&gt;
 </code></pre>
 <h3 id="update-seller-fee-basis-points-all"><a class="header" href="#update-seller-fee-basis-points-all">Update Seller Fee Basis Points All</a></h3>
 <p>Update the seller fee basis points field on a a list of NFTs, keeping the rest of the <code>Data</code> struct the same.</p>
 <h4 id="usage-22"><a class="header" href="#usage-22">Usage</a></h4>
-<pre><code class="language-bash">metaboss update sfbp-all --keypair &lt;PATH_TO_KEYPAIR&gt; -L &lt;PATH_TO_MINT_LIST.json&gt; -n &lt;NEW_SELLER_FEE_BASIS_POINTS_VALUE&gt;
+<pre><code class="language-bash">cooper update sfbp-all --keypair &lt;PATH_TO_KEYPAIR&gt; -L &lt;PATH_TO_MINT_LIST.json&gt; -n &lt;NEW_SELLER_FEE_BASIS_POINTS_VALUE&gt;
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h2 id="withdraw-deprecated"><a class="header" href="#withdraw-deprecated">Withdraw (Deprecated)</a></h2>
-<p>Use Metaplex's <a href="https://docs.metaplex.com/sugar/introduction">Sugar</a> tool for withdrawing from candy machines instead.</p>
+<p>Use Metaplex's <a href="https://docs.metaplex.com/sugar/introduction">Sugar</a> tool for withdrawing from tarss instead.</p>
 <div style="break-before: page; page-break-before: always;"></div><h2 id="contact"><a class="header" href="#contact">Contact</a></h2>
 <p>Email: sam@vanderwaal.dev</p>
 <p>Twitter: <a href="https://twitter.com/samvwaal">@samvwaal</a></p>
 <p>Discord: </p>
 <p>@archaeopteryx#7615</p>
-<p><a href="https://discord.gg/GFF5NMSnXN">Metaboss Discord Server</a></p>
+<p><a href="https://discord.gg/GFF5NMSnXN">Cooper Discord Server</a></p>
 
                     </main>
 

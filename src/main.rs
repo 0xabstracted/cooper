@@ -2,17 +2,17 @@
 extern crate log;
 
 use anyhow::Result;
-use metaboss::constants::PUBLIC_RPC_URLS;
+use cooper::constants::PUBLIC_RPC_URLS;
 use solana_client::{nonblocking::rpc_client::RpcClient as AsyncRpcClient, rpc_client::RpcClient};
 use solana_sdk::commitment_config::CommitmentConfig;
 use std::str::FromStr;
 use std::time::Duration;
 use structopt::StructOpt;
 
-use metaboss::constants::*;
-use metaboss::opt::*;
-use metaboss::parse::parse_solana_config;
-use metaboss::process_subcommands::*;
+use cooper::constants::*;
+use cooper::opt::*;
+use cooper::parse::parse_solana_config;
+use cooper::process_subcommands::*;
 
 #[tokio::main]
 async fn main() -> Result<()> {

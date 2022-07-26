@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Decode - Metaboss</title>
+        <title>Decode - Cooper</title>
 
 
         <!-- Custom HTML head -->
@@ -110,7 +110,7 @@
                         </button>
                     </div>
 
-                    <h1 class="menu-title">Metaboss</h1>
+                    <h1 class="menu-title">Cooper</h1>
 
                     <div class="right-buttons">
                         <a href="print.html" title="Print this book" aria-label="Print this book">
@@ -146,10 +146,10 @@
 <h3 id="decode-mint"><a class="header" href="#decode-mint">Decode Mint</a></h3>
 <p>Decodes a mint account's metadata into a JSON file. It accepts either a single account or a list of accounts.</p>
 <h4 id="usage"><a class="header" href="#usage">Usage</a></h4>
-<pre><code class="language-bash">metaboss decode mint --account &lt;MINT_ACCOUNT&gt; -o &lt;OUPUT_DIRECTORY&gt;
+<pre><code class="language-bash">cooper decode mint --account &lt;MINT_ACCOUNT&gt; -o &lt;OUPUT_DIRECTORY&gt;
 </code></pre>
 <p>The command will write the metadata JSON file to the output directory with the mint account as the name: e.g. <code>CQNKXw1rw2eWwi812Exk4cKUjKuomZ2156STGRyXd2Mp.json</code>. The output option defaults to the current directory.</p>
-<pre><code class="language-bash">metaboss decode mint --list-file &lt;LIST_FILE&gt; -o &lt;OUPUT_DIRECTORY&gt;
+<pre><code class="language-bash">cooper decode mint --list-file &lt;LIST_FILE&gt; -o &lt;OUPUT_DIRECTORY&gt;
 </code></pre>
 <p>The JSON list file should be an array of mint accounts to be decoded:</p>
 <pre><code class="language-json">[&quot;xSy...&quot;, &quot;Cnb...&quot; ...]

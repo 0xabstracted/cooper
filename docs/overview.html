@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Overview - Metaboss</title>
+        <title>Overview - Cooper</title>
 
 
         <!-- Custom HTML head -->
@@ -110,7 +110,7 @@
                         </button>
                     </div>
 
-                    <h1 class="menu-title">Metaboss</h1>
+                    <h1 class="menu-title">Cooper</h1>
 
                     <div class="right-buttons">
                         <a href="print.html" title="Print this book" aria-label="Print this book">
@@ -142,11 +142,11 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="metaboss"><a class="header" href="#metaboss">Metaboss</a></h1>
-<p><a href="https://github.com/samuelvanderwaal/metaboss"><img src="https://img.shields.io/github/stars/samuelvanderwaal/metaboss?style=social" alt="Stars" /></a>
-<a href="https://github.com/samuelvanderwaal/metaboss"><img src="https://img.shields.io/github/forks/samuelvanderwaal/metaboss?style=social" alt="Forks" /></a>
-<a href="https://crates.io/crates/metaboss"><img src="https://img.shields.io/crates/v/metaboss" alt="Crate" /></a>
-<a href="https://crates.io/crates/metaboss"><img src="https://img.shields.io/crates/d/metaboss" alt="Downloads" /></a></p>
+                        <h1 id="cooper"><a class="header" href="#cooper">Cooper</a></h1>
+<p><a href="https://github.com/samuelvanderwaal/cooper"><img src="https://img.shields.io/github/stars/samuelvanderwaal/cooper?style=social" alt="Stars" /></a>
+<a href="https://github.com/samuelvanderwaal/cooper"><img src="https://img.shields.io/github/forks/samuelvanderwaal/cooper?style=social" alt="Forks" /></a>
+<a href="https://crates.io/crates/cooper"><img src="https://img.shields.io/crates/v/cooper" alt="Crate" /></a>
+<a href="https://crates.io/crates/cooper"><img src="https://img.shields.io/crates/d/cooper" alt="Downloads" /></a></p>
 <p>The Solana Metaplex NFT 'Swiss Army Knife' tool.</p>
 <p>Current supported features:</p>
 <ul>
@@ -163,16 +163,16 @@
 <p>Set <code>update_authorty</code> address on an NFT's metadata</p>
 </li>
 <li>
-<p>Verify a creator by signing the metadata accounts for all tokens in a list, for a given candy machine id or a single mint account</p>
+<p>Verify a creator by signing the metadata accounts for all tokens in a list, for a given tars id or a single mint account</p>
 </li>
 <li>
-<p>Get a snapshot of current NFT holders for a given candy machine ID or update authority</p>
+<p>Get a snapshot of current NFT holders for a given tars ID or update authority</p>
 </li>
 <li>
-<p>Get a list of mint accounts for a given candy machine ID or update authority</p>
+<p>Get a list of mint accounts for a given tars ID or update authority</p>
 </li>
 <li>
-<p>Get a list of all candy machine state and config accounts for a given update authority</p>
+<p>Get a list of all tars state and config accounts for a given update authority</p>
 </li>
 <li>
 <p>Update all metadata Data struct fields for a NFT</p>
@@ -185,28 +185,28 @@
 <p><strong>Note: This is experimental software for a young ecosystem. Use at your own risk. The author is not responsible for misuse of the software or failing to test specific commands before using on production NFTs.</strong></p>
 <h2 id="recommended-way-to-install"><a class="header" href="#recommended-way-to-install">Recommended Way to Install</a></h2>
 <p>For non-technical users, the recommended way to install is to use the install script to install on <strong>MacOs</strong>, <strong>Ubuntu</strong>, or other <strong>Unix-like OS</strong>, by copying the following into a terminal:</p>
-<pre><code>bash &lt;(curl -sSf https://raw.githubusercontent.com/samuelvanderwaal/metaboss/main/scripts/install.sh)
+<pre><code>bash &lt;(curl -sSf https://raw.githubusercontent.com/samuelvanderwaal/cooper/main/scripts/install.sh)
 </code></pre>
-<p>This will download the appropriate binary for your system and install it. Feel free to inspect the install script directly at <a href="https://raw.githubusercontent.com/samuelvanderwaal/metaboss/main/scripts/install.sh">the link</a> to see what you are running before you run the command.</p>
+<p>This will download the appropriate binary for your system and install it. Feel free to inspect the install script directly at <a href="https://raw.githubusercontent.com/samuelvanderwaal/cooper/main/scripts/install.sh">the link</a> to see what you are running before you run the command.</p>
 <p>For <strong>Windows</strong>, either use the prebuilt binary in the following section, or install Windows Subsystem Linux (WSL) to use the Ubuntu terminal to run the above installation script.</p>
-<p>To install WSL on Windows, either run <code>wsl --install -d ubuntu</code> in the cmd prompt terminal, or install &quot;Ubuntu&quot; from the Windows app store. Once you have that set up you can simply run the install script in the WSL terminal. You will then run all your Metaboss commands from WSL as well.</p>
+<p>To install WSL on Windows, either run <code>wsl --install -d ubuntu</code> in the cmd prompt terminal, or install &quot;Ubuntu&quot; from the Windows app store. Once you have that set up you can simply run the install script in the WSL terminal. You will then run all your Cooper commands from WSL as well.</p>
 <h2 id="binaries"><a class="header" href="#binaries">Binaries</a></h2>
-<p>Linux, MacOS and Windows binaries available in <a href="https://github.com/samuelvanderwaal/metaboss/releases">releases</a>, thanks to CI work done by <a href="https://github.com/KartikSoneji">Kartik Soneji</a>.</p>
+<p>Linux, MacOS and Windows binaries available in <a href="https://github.com/samuelvanderwaal/cooper/releases">releases</a>, thanks to CI work done by <a href="https://github.com/KartikSoneji">Kartik Soneji</a>.</p>
 <h2 id="install-from-source"><a class="header" href="#install-from-source">Install From Source</a></h2>
 <p>Install <a href="https://www.rust-lang.org/tools/install">Rust</a>.</p>
 <pre><code class="language-bash">curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 </code></pre>
 <p>Clone the source:</p>
-<pre><code class="language-bash">git clone git@github.com:samuelvanderwaal/metaboss.git
+<pre><code class="language-bash">git clone git@github.com:samuelvanderwaal/cooper.git
 </code></pre>
 <p>or</p>
-<pre><code class="language-bash">git clone https://github.com/samuelvanderwaal/metaboss.git
+<pre><code class="language-bash">git clone https://github.com/samuelvanderwaal/cooper.git
 </code></pre>
 <p>On Ubuntu you may need some additional packages:</p>
 <pre><code>sudo apt install libssl-dev libudev-dev pkg-config
 </code></pre>
 <p>Change directory and check out the <code>main</code> branch:</p>
-<pre><code class="language-bash">cd metaboss
+<pre><code class="language-bash">cd cooper
 git checkout main
 </code></pre>
 <p>Install or build with Rust:</p>
@@ -216,7 +216,7 @@ git checkout main
 <pre><code class="language-bash">cargo build --release
 </code></pre>
 <h2 id="set-up-your-solana-config"><a class="header" href="#set-up-your-solana-config">Set Up Your Solana Config</a></h2>
-<p>If you have the <a href="https://docs.solana.com/cli/install-solana-cli-tools">Solana CLI</a> installed (recommended) you can setup your RPC and keypair so you don't have to pass them into Metaboss:</p>
+<p>If you have the <a href="https://docs.solana.com/cli/install-solana-cli-tools">Solana CLI</a> installed (recommended) you can setup your RPC and keypair so you don't have to pass them into Cooper:</p>
 <pre><code>solana config set --url &lt;rpc url&gt; --keypair &lt;path to keypair file&gt;
 </code></pre>
 

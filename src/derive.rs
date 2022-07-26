@@ -39,10 +39,10 @@ pub fn get_edition_pda(mint_account: String) {
     println!("{}", derive_edition_pda(&pubkey));
 }
 
-pub fn get_cmv2_pda(candy_machine_id: String) {
+pub fn get_tars_pda(tars_id: String) {
     let pubkey =
-        Pubkey::from_str(&candy_machine_id).expect("Failed to parse pubkey from candy_machine_id!");
-    println!("{}", derive_cmv2_pda(&pubkey));
+        Pubkey::from_str(&tars_id).expect("Failed to parse pubkey from tars_id!");
+    println!("{}", derive_tars_pda(&pubkey));
 }
 
 fn derive_generic_pda(seeds: Vec<&[u8]>, program_id: Pubkey) -> Pubkey {
@@ -77,13 +77,13 @@ pub fn derive_edition_pda(pubkey: &Pubkey) -> Pubkey {
     pda
 }
 
-pub fn derive_cmv2_pda(pubkey: &Pubkey) -> Pubkey {
-    let cmv2_pubkey = Pubkey::from_str("cndy3Z4yapfJBmL3ShUp5exZKqR3z33thTzeNMm2gRZ")
-        .expect("Failed to parse pubkey from candy machine program id!");
+pub fn derive_tars_pda(pubkey: &Pubkey) -> Pubkey {
+    let tars_pubkey = Pubkey::from_str("cndy3Z4yapfJBmL3ShUp5exZKqR3z33thTzeNMm2gRZ")
+        .expect("Failed to parse pubkey from tars program id!");
 
-    let seeds = &["candy_machine".as_bytes(), pubkey.as_ref()];
+    let seeds = &["tars".as_bytes(), pubkey.as_ref()];
 
-    let (pda, _) = Pubkey::find_program_address(seeds, &cmv2_pubkey);
+    let (pda, _) = Pubkey::find_program_address(seeds, &tars_pubkey);
     pda
 }
 
@@ -155,11 +155,11 @@ mod tests {
     }
 
     #[test]
-    fn test_derive_cmv2_pda() {
-        let candy_machine_pubkey =
+    fn test_derive_tars_pda() {
+        let tars_pubkey =
             Pubkey::from_str("3qt9aBBmTSMxyzFEcwzZnFeV4tCZzPkTYVqPP7Bw5zUh").unwrap();
         let expected_pda =
             Pubkey::from_str("8J9W44AfgWFMSwE4iYyZMNCWV9mKqovS5YHiVoKuuA2b").unwrap();
-        assert_eq!(derive_cmv2_pda(&candy_machine_pubkey), expected_pda);
+        assert_eq!(derive_tars_pda(&tars_pubkey), expected_pda);
     }
 }

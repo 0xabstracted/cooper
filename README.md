@@ -1,11 +1,11 @@
-[![Crate](https://img.shields.io/crates/v/metaboss)](https://crates.io/crates/metaboss)
-[![Downloads](https://img.shields.io/crates/d/metaboss)](https://crates.io/crates/metaboss)
-[![Build Status](https://img.shields.io/github/workflow/status/samuelvanderwaal/metaboss/CI)](https://github.com/samuelvanderwaal/metaboss/actions)
-[![License](https://img.shields.io/crates/l/metaboss)](https://github.com/samuelvanderwaal/metaboss/blob/main/LICENSE)
+[![Crate](https://img.shields.io/crates/v/cooper)](https://crates.io/crates/cooper)
+[![Downloads](https://img.shields.io/crates/d/cooper)](https://crates.io/crates/cooper)
+[![Build Status](https://img.shields.io/github/workflow/status/samuelvanderwaal/cooper/CI)](https://github.com/samuelvanderwaal/cooper/actions)
+[![License](https://img.shields.io/crates/l/cooper)](https://github.com/samuelvanderwaal/cooper/blob/main/LICENSE)
 
-# Metaboss
+# Cooper
 
-![metaboss logo](mb_logo.gif?raw=true)
+![cooper logo](mb_logo.gif?raw=true)
 
 ## Overview
 
@@ -21,11 +21,11 @@ Features:
 
 -   Set `update_authority` address on an NFT's metadata
 
--   Verify a creator by signing the metadata accounts for all tokens in a list, for a given candy machine id or a single mint account
+-   Verify a creator by signing the metadata accounts for all tokens in a list, for a given tars id or a single mint account
 
--   Get a snapshot of current NFT holders for a given candy machine ID or update authority
+-   Get a snapshot of current NFT holders for a given tars ID or update authority
 
-... and more! See the [docs](https://metaboss.rs) for full features and usage instructions.
+... and more! See the [docs](https://cooper.rs) for full features and usage instructions.
 
 
 Suggestions and PRs welcome!
@@ -39,7 +39,7 @@ Suggestions and PRs welcome!
 Copy the following to a terminal:
 
 ```bash
-bash <(curl -sSf https://raw.githubusercontent.com/samuelvanderwaal/metaboss/main/scripts/install.sh)
+bash <(curl -sSf https://raw.githubusercontent.com/samuelvanderwaal/cooper/main/scripts/install.sh)
 ```
 
 If you get errors you may need dependencies:
@@ -58,12 +58,12 @@ brew install openssl@3
 
 ### Binaries
 
-Linux, MacOS and Windows binaries available in [releases](https://github.com/samuelvanderwaal/metaboss/releases), thanks to CI work done by [Kartik Soneji](https://github.com/KartikSoneji).
+Linux, MacOS and Windows binaries available in [releases](https://github.com/samuelvanderwaal/cooper/releases), thanks to CI work done by [Kartik Soneji](https://github.com/KartikSoneji).
 
 ### Install From crates.io
 
 ```bash
-cargo install metaboss
+cargo install cooper
 ```
 
 ### Install From Source
@@ -79,19 +79,19 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 Clone the source:
 
 ```bash
-git clone git@github.com:samuelvanderwaal/metaboss.git
+git clone git@github.com:samuelvanderwaal/cooper.git
 ```
 
 or
 
 ```bash
-git clone https://github.com/samuelvanderwaal/metaboss.git
+git clone https://github.com/samuelvanderwaal/cooper.git
 ```
 
 Change directory and check out the `main` branch:
 
 ```bash
-cd metaboss
+cd cooper
 git checkout main
 ```
 

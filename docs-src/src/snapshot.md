@@ -4,15 +4,15 @@ Get snapshots of various blockchain states.
 
 ### Snapshot CM-Accounts
 
-Snapshot all candy machine config and state accounts for a given update_authority.
+Snapshot all tars config and state accounts for a given update_authority.
 
 #### Usage
 
 ```bash
-metaboss snapshot cm-accounts --update-authority <UPDATE_AUTHORITY> --output <OUTPUT_DIR>
+cooper snapshot cm-accounts --update-authority <UPDATE_AUTHORITY> --output <OUTPUT_DIR>
 ```
 
-Creates a JSON file in the output directory with the name format of `<UPDATE_AUTHORITY>_accounts.json`, consisting of an object with the fields `config_accounts` and `candy_machine_accounts`:
+Creates a JSON file in the output directory with the name format of `<UPDATE_AUTHORITY>_accounts.json`, consisting of an object with the fields `config_accounts` and `tars_accounts`:
 
 ```json
 {
@@ -26,7 +26,7 @@ Creates a JSON file in the output directory with the name format of `<UPDATE_AUT
             "data_len": 1216
         }
     ],
-    "candy_machine_accounts": [
+    "tars_accounts": [
         {
             "address": "DwoPaGFxJpGRq3kZQBNfBroCGaS9Hdg2rpFHJpD2iBhW",
             "data_len": 529
@@ -41,13 +41,13 @@ Creates a JSON file in the output directory with the name format of `<UPDATE_AUT
 
 ### Snapshot Holders
 
-Snapshot all current holders of NFTs filtered by verified candy_machine_id/first creator or update_authority.
+Snapshot all current holders of NFTs filtered by verified tars_id/first creator or update_authority.
 **Note:** Update authority can be faked so use that option with caution.
 
 #### Usage
 
 ```bash
-metaboss snapshot holders --creator <CREATOR_ADDRESS> -p <POSITION> --output <OUTPUT_DIR>
+cooper snapshot holders --creator <CREATOR_ADDRESS> -p <POSITION> --output <OUTPUT_DIR>
 ```
 
 Use the positon to indicate which creator in the creators array to filter by; defaults to the first one (position 0).
@@ -55,16 +55,16 @@ Use the positon to indicate which creator in the creators array to filter by; de
 or
 
 ```bash
-metaboss snapshot holders --update-authority <UPDATE_AUTHORITY> --output <OUTPUT_DIR>
+cooper snapshot holders --update-authority <UPDATE_AUTHORITY> --output <OUTPUT_DIR>
 ```
 
-**For candy machine v2, you can add the `--v2` option when using it with candy machine id.**
-Candy machine v2 has a separate creator id from the candy machine account id. 
+**For tars v2, you can add the `--v2` option when using it with tars id.**
+Tars v2 has a separate creator id from the tars account id. 
 
 ```bash
-metaboss snapshot holders --creator <CANDY_MACHINE_ID> --v2 --output <OUTPUT_DIR>
+cooper snapshot holders --creator <TARS_ID> --v2 --output <OUTPUT_DIR>
 ```
-where <CANDY_MACHINE_ID> is the candy machine id retrieved from the cache file.
+where <TARS_ID> is the tars id retrieved from the cache file.
 
 Creates a JSON file in the output directory with the name format of `<CREATOR/UPDATE_AUTHORITY>_holders.json` consisting of an array of objects with the following fields:
 
@@ -88,12 +88,12 @@ Example file:
 
 ### Snapshot Mints
 
-Snapshot all mint accounts for a given verified candy machine id/first creator or update authority
+Snapshot all mint accounts for a given verified tars id/first creator or update authority
 
 #### Usage
 
 ```bash
-metaboss snapshot mints --creator <FIRST_CREATOR> --output <OUTPUT_DIR>
+cooper snapshot mints --creator <FIRST_CREATOR> --output <OUTPUT_DIR>
 ```
 
 Use the positon to indicate which creator in the creators array to filter by; defaults to the first one (position 0).
@@ -101,18 +101,18 @@ Use the positon to indicate which creator in the creators array to filter by; de
 or
 
 ```bash
-metaboss snapshot mints --update-authority <UPDATE_AUTHORITY> --output <OUTPUT_DIR>
+cooper snapshot mints --update-authority <UPDATE_AUTHORITY> --output <OUTPUT_DIR>
 ```
 
-**For candy machine v2, you can add the `--v2` option when using it with candy machine id.**
-Candy machine v2 has a separate creator id from the candy machine account id.
+**For tars v2, you can add the `--v2` option when using it with tars id.**
+Tars v2 has a separate creator id from the tars account id.
 
 ```bash
-metaboss snapshot mints --creator <CANDY_MACHINE_ID> --v2 --output <OUTPUT_DIR>
+cooper snapshot mints --creator <TARS_ID> --v2 --output <OUTPUT_DIR>
 ```
-where <CANDY_MACHINE_ID> is the candy machine id retrieved from the cache file.
+where <TARS_ID> is the tars id retrieved from the cache file.
 
-Creates a JSON file in the output directory with the name format of `<CANDY_MACHINE_ID/UPDATE_AUTHORITY>_mint_accounts.json` consisting of an array of mint accounts.
+Creates a JSON file in the output directory with the name format of `<TARS_ID/UPDATE_AUTHORITY>_mint_accounts.json` consisting of an array of mint accounts.
 
 ```json
 [
@@ -124,14 +124,14 @@ Creates a JSON file in the output directory with the name format of `<CANDY_MACH
 
 ### Indexed Data
 
-Metaboss now has experimental support for running snapshot commands using off-chain, indexed data from https://theindex.io/. Other indexers or methods may be supported later. To use this feature, you need to sign up for a free account with TheIndex to get an API key.
+Cooper now has experimental support for running snapshot commands using off-chain, indexed data from https://theindex.io/. Other indexers or methods may be supported later. To use this feature, you need to sign up for a free account with TheIndex to get an API key.
 
 ### Snapshot Indexed Mints
 
 #### Usage
 
 ```bash
-metaboss snapshot indexed-mints --creator <FIRST_VERIFIED_CREATOR> --api-key <THEINDEX.IO_API_KEY>
+cooper snapshot indexed-mints --creator <FIRST_VERIFIED_CREATOR> --api-key <THEINDEX.IO_API_KEY>
 ```
 
 ### Snapshot Indexed Holders
@@ -139,5 +139,5 @@ metaboss snapshot indexed-mints --creator <FIRST_VERIFIED_CREATOR> --api-key <TH
 #### Usage
 
 ```bash
-metaboss snapshot indexed-holders --creator <FIRST_VERIFIED_CREATOR> --api-key <THEINDEX.IO_API_KEY>
+cooper snapshot indexed-holders --creator <FIRST_VERIFIED_CREATOR> --api-key <THEINDEX.IO_API_KEY>
 ```

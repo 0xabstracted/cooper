@@ -13,10 +13,10 @@ Update the `Data` struct on a NFT from a JSON file.
 #### Usage
 
 ```bash
-metaboss update data --keypair <PATH_TO_KEYPAIR> --account <MINT_ACCOUNT> --new-data-file <PATH_TO_NEW_DATA_FILE>
+cooper update data --keypair <PATH_TO_KEYPAIR> --account <MINT_ACCOUNT> --new-data-file <PATH_TO_NEW_DATA_FILE>
 ```
 
-The JSON file should include all the fields of the metadata `Data` struct and should match `creator` `verified` bools for existing creators. E.g. if your NFT was minted by the Metaplex Candy Machine program, and you wish to keep your candy machine as a verified creator _you must add the candy machine to your creators array with `verified` set to `true`_.
+The JSON file should include all the fields of the metadata `Data` struct and should match `creator` `verified` bools for existing creators. E.g. if your NFT was minted by the Metaplex Tars program, and you wish to keep your tars as a verified creator _you must add the tars to your creators array with `verified` set to `true`_.
 
 Note: The on-chain `Data` struct is *different* than the external metadata stored at the link in the `uri` field so make you understand the difference before running this command.
 
@@ -30,7 +30,7 @@ Note: The on-chain `Data` struct is *different* than the external metadata store
     "seller_fee_basis_points": 100,
     "creators": [
         {
-            "address": "<YOUR_CANDY_MACHINE_ID>",
+            "address": "<YOUR_TARS_ID>",
             "verified": true,
             "share": 0
         },
@@ -57,10 +57,10 @@ Update the `Data` struct on a list of NFTs from JSON files.
 #### Usage
 
 ```bash
-metaboss update data-all --keypair <PATH_TO_KEYPAIR> --data-dir <PATH_TO_DATA_DIR>
+cooper update data-all --keypair <PATH_TO_KEYPAIR> --data-dir <PATH_TO_DATA_DIR>
 ```
 
-Each JSON file in the data directory should include the mint account and all the fields of the metadata `Data` struct and should match `creator` `verified` bools for existing creators. E.g. if your NFT was minted by the Metaplex Candy Machine program, and you wish to keep your candy machine as a verified creator _you must add the candy machine to your creators array with `verified` set to `true`_.
+Each JSON file in the data directory should include the mint account and all the fields of the metadata `Data` struct and should match `creator` `verified` bools for existing creators. E.g. if your NFT was minted by the Metaplex Tars program, and you wish to keep your tars as a verified creator _you must add the tars to your creators array with `verified` set to `true`_.
 
 Note: The on-chain `Data` struct is *different* than the external metadata stored at the link in the `uri` field so make you understand the difference before running this command.
 
@@ -77,7 +77,7 @@ Note: The on-chain `Data` struct is *different* than the external metadata store
     "seller_fee_basis_points": 100,
     "creators": [
         {
-            "address": "<YOUR_CANDY_MACHINE_ID>",
+            "address": "<YOUR_TARS_ID>",
             "verified": true,
             "share": 0
         },
@@ -104,7 +104,7 @@ Update the on-chain name of a NFT, keeping the rest of the `Data` struct the sam
 #### Usage
 
 ```bash
- metaboss update name --keypair <PATH_TO_KEYPAIR> --account <MINT_ACCOUNT> --new-name <NEW_NAME>
+ cooper update name --keypair <PATH_TO_KEYPAIR> --account <MINT_ACCOUNT> --new-name <NEW_NAME>
  ```
 
 
@@ -115,7 +115,7 @@ Update the on-chain symbol of a NFT, keeping the rest of the `Data` struct the s
 #### Usage
 
 ```bash
- metaboss update symbol --keypair <PATH_TO_KEYPAIR> --account <MINT_ACCOUNT> --new-symbol <NEW_SYMBOL>
+ cooper update symbol --keypair <PATH_TO_KEYPAIR> --account <MINT_ACCOUNT> --new-symbol <NEW_SYMBOL>
  ```
 
  ### Update Symbol All
@@ -125,7 +125,7 @@ Update the on-chain symbol of a list of NFTs, keeping the rest of the `Data` str
 #### Usage
 
 ```bash
- metaboss update symbol-all --keypair <PATH_TO_KEYPAIR> -L <PATH_TO_LIST_MINT_ADDRESSES> --new-symbol <NEW_SYMBOL>
+ cooper update symbol-all --keypair <PATH_TO_KEYPAIR> -L <PATH_TO_LIST_MINT_ADDRESSES> --new-symbol <NEW_SYMBOL>
  ```
 
 ### Update Creators
@@ -135,7 +135,7 @@ Update the creators of a NFT, keeping the rest of the `Data` struct the same.
 #### Usage
 
 ```bash
-metaboss update creators -k <PATH_TO_KEYPAIR> -a <MINT_ACCOUNT> -c <CREATOR1:SHARE:VERIFIED,CREATOR2:SHARE:VERIFIED>
+cooper update creators -k <PATH_TO_KEYPAIR> -a <MINT_ACCOUNT> -c <CREATOR1:SHARE:VERIFIED,CREATOR2:SHARE:VERIFIED>
 ```
 
 Creators should be a comma-delimited list of creator:share:verified. E.g. 
@@ -143,7 +143,7 @@ Creators should be a comma-delimited list of creator:share:verified. E.g.
 Example:
 
 ```bash
-metaboss update creators -k ~/.config/solana/devnet.json -a 4rxTT8pKeYFrFgNBgTspBWVEnMnsAZGwChkjRUtP4Xpi -c 42NevAWA6A8m9prDvZRUYReQmhNC3NtSZQNFUppPJDRB:70:false,AVdBTNhDqYgXGaaVkqiaUJ1Yqa61hMiFFaVRtqwzs5GZ:30:false
+cooper update creators -k ~/.config/solana/devnet.json -a 4rxTT8pKeYFrFgNBgTspBWVEnMnsAZGwChkjRUtP4Xpi -c 42NevAWA6A8m9prDvZRUYReQmhNC3NtSZQNFUppPJDRB:70:false,AVdBTNhDqYgXGaaVkqiaUJ1Yqa61hMiFFaVRtqwzs5GZ:30:false
 ```
 
 Using the `--append` flag will set the shares to 0 and append to the existing creators list, otherwise the creators are overwritten with the list you pass in.
@@ -153,7 +153,7 @@ Using the `--append` flag will set the shares to 0 and append to the existing cr
 Same as update creators but takes a mint list instead of a single account.
 
 ```bash
-metaboss update creators-all  -k ~/.config/solana/devnet.json -L mints.json -c 42NevAWA6A8m9prDvZRUYReQmhNC3NtSZQNFUppPJDRB:70:false,AVdBTNhDqYgXGaaVkqiaUJ1Yqa61hMiFFaVRtqwzs5GZ:30:false
+cooper update creators-all  -k ~/.config/solana/devnet.json -L mints.json -c 42NevAWA6A8m9prDvZRUYReQmhNC3NtSZQNFUppPJDRB:70:false,AVdBTNhDqYgXGaaVkqiaUJ1Yqa61hMiFFaVRtqwzs5GZ:30:false
 ```
 
 ### Update URI
@@ -163,7 +163,7 @@ Update the metadata URI, keeping the rest of the `Data` struct the same.
 #### Usage
 
 ```bash
-metaboss update uri --keypair <PATH_TO_KEYPAIR> --account <MINT_ACCOUNT> --new-uri <NEW_URI>
+cooper update uri --keypair <PATH_TO_KEYPAIR> --account <MINT_ACCOUNT> --new-uri <NEW_URI>
 ```
 
 ### Update URI All
@@ -173,7 +173,7 @@ Update the metadata URI for a list of mint accounts, keeping the rest of the `Da
 #### Usage
 
 ```bash
-metaboss update uri-all --keypair <PATH_TO_KEYPAIR> --json-file <PATH_TO_JSON_FILE>
+cooper update uri-all --keypair <PATH_TO_KEYPAIR> --json-file <PATH_TO_JSON_FILE>
 ```
 
 ```json
@@ -196,7 +196,7 @@ Update the seller fee basis points field on an NFT, keeping the rest of the `Dat
 #### Usage
 
 ```bash
-metaboss update sfbp --keypair <PATH_TO_KEYPAIR> -a <MINT_ACCOUNT> -n <NEW_SELLER_FEE_BASIS_POINTS_VALUE>
+cooper update sfbp --keypair <PATH_TO_KEYPAIR> -a <MINT_ACCOUNT> -n <NEW_SELLER_FEE_BASIS_POINTS_VALUE>
 ```
 
 ### Update Seller Fee Basis Points All
@@ -206,5 +206,5 @@ Update the seller fee basis points field on a a list of NFTs, keeping the rest o
 #### Usage
 
 ```bash
-metaboss update sfbp-all --keypair <PATH_TO_KEYPAIR> -L <PATH_TO_MINT_LIST.json> -n <NEW_SELLER_FEE_BASIS_POINTS_VALUE>
+cooper update sfbp-all --keypair <PATH_TO_KEYPAIR> -L <PATH_TO_MINT_LIST.json> -n <NEW_SELLER_FEE_BASIS_POINTS_VALUE>
 ```

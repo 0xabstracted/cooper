@@ -3,7 +3,7 @@
 ### Update the URI of an existing NFT
 
 ```bash
-metaboss update uri -k ~/.config/solana/devnet.json -a CQNKXw1rw2eWwi812Exk4cKUjKuomZ2156STGRyXd2Mp -u https://arweave.net/N36gZYJ6PEH8OE11i0MppIbPG4VXKV4iuQw1zaq3rls
+cooper update uri -k ~/.config/solana/devnet.json -a CQNKXw1rw2eWwi812Exk4cKUjKuomZ2156STGRyXd2Mp -u https://arweave.net/N36gZYJ6PEH8OE11i0MppIbPG4VXKV4iuQw1zaq3rls
 ```
 
 ### Mint a new NFT
@@ -34,15 +34,15 @@ Prepare a JSON file.
 Call command. In this case we do not set `--receiver` so we mint directly to the `keypair` address.
 
 ```bash
-metaboss mint one -k ~/.config/solana/devnet.json -d ./new_nft.json
+cooper mint one -k ~/.config/solana/devnet.json -d ./new_nft.json
 ```
 
-### Snapshot Candy Machine Mint Accounts
+### Snapshot Tars Mint Accounts
 
 We call the command with no output specified so it creates the file in the current directory.
 
 ```bash
-metaboss snapshot mints -c BHZWQEtGRMs7voC7vDyVQCXawB1P6UvxG899ATGwxmaR
+cooper snapshot mints -c BHZWQEtGRMs7voC7vDyVQCXawB1P6UvxG899ATGwxmaR
 ```
 
 The file `BHZWQEtGRMs7voC7vDyVQCXawB1P6UvxG899ATGwxmaR_mint_accounts.json` is created with the contents:

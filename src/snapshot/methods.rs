@@ -2,7 +2,7 @@ use super::common::*;
 use super::data::*;
 
 use crate::data::Indexers;
-use crate::derive::derive_cmv2_pda;
+use crate::derive::derive_tars_pda;
 use crate::limiter::create_default_rate_limiter;
 use crate::limiter::create_rate_limiter;
 use crate::parse::{creator_is_verified, is_only_one_option};
@@ -14,7 +14,7 @@ use crate::{constants::*, decode::get_metadata_pda};
 pub fn snapshot_mints(client: &RpcClient, args: SnapshotMintsArgs) -> Result<()> {
     if !is_only_one_option(&args.creator, &args.update_authority) {
         return Err(anyhow!(
-            "Please specify either a candy machine id or an update authority, but not both."
+            "Please specify either a tars id or an update authority, but not both."
         ));
     }
 
@@ -24,7 +24,7 @@ pub fn snapshot_mints(client: &RpcClient, args: SnapshotMintsArgs) -> Result<()>
         creator.clone()
     } else {
         return Err(anyhow!(
-            "Must specify either --update-authority or --candy-machine-id"
+            "Must specify either --update-authority or --tars-id"
         ));
     };
 
@@ -89,14 +89,14 @@ pub fn get_mint_accounts(
         if v2 {
             let creator_pubkey =
                 Pubkey::from_str(creator).expect("Failed to parse pubkey from creator!");
-            let cmv2_creator = derive_cmv2_pda(&creator_pubkey);
-            get_cm_creator_accounts(client, &cmv2_creator.to_string(), position)?
+            let tars_creator = derive_tars_pda(&creator_pubkey);
+            get_cm_creator_accounts(client, &tars_creator.to_string(), position)?
         } else {
             get_cm_creator_accounts(client, creator, position)?
         }
     } else {
         return Err(anyhow!(
-            "Please specify either a candy machine id or an update authority, but not both."
+            "Please specify either a tars id or an update authority, but not both."
         ));
     };
     spinner.finish();
@@ -142,8 +142,8 @@ pub fn snapshot_holders(
         if v2 {
             let creator_pubkey =
                 Pubkey::from_str(creator).expect("Failed to parse pubkey from creator!");
-            let cmv2_creator = derive_cmv2_pda(&creator_pubkey);
-            get_cm_creator_accounts(client, &cmv2_creator.to_string(), position)?
+            let tars_creator = derive_tars_pda(&creator_pubkey);
+            get_cm_creator_accounts(client, &tars_creator.to_string(), position)?
         } else {
             get_cm_creator_accounts(client, creator, position)?
         }
@@ -153,7 +153,7 @@ pub fn snapshot_holders(
         get_mint_account_infos(client, mint_accounts)?
     } else {
         return Err(anyhow!(
-            "Must specify either --update-authority or --candy-machine-id or --mint-accounts-file"
+            "Must specify either --update-authority or --tars-id or --mint-accounts-file"
         ));
     };
     spinner.finish_with_message("Getting accounts...Done!");
@@ -253,7 +253,7 @@ pub fn snapshot_holders(
         str::replace(mint_accounts_file, ".json", "")
     } else {
         return Err(anyhow!(
-            "Must specify either --update-authority or --candy-machine-id or --mint-accounts-file"
+            "Must specify either --update-authority or --tars-id or --mint-accounts-file"
         ));
     };
 
@@ -487,14 +487,14 @@ pub fn snapshot_cm_accounts(
     let accounts = get_cm_accounts_by_update_authority(client, update_authority)?;
 
     let mut config_accounts = Vec::new();
-    let mut candy_machine_accounts = Vec::new();
+    let mut tars_accounts = Vec::new();
 
     for (pubkey, account) in accounts {
         let length = account.data.len();
 
-        // Candy machine accounts have a fixed length, config accounts do not.
+        // Tars accounts have a fixed length, config accounts do not.
         if length == 529 {
-            candy_machine_accounts.push(CandyMachineAccount {
+            tars_accounts.push(TarsAccount {
                 address: pubkey.to_string(),
                 data_len: length,
             });
@@ -505,13 +505,13 @@ pub fn snapshot_cm_accounts(
             });
         }
     }
-    let candy_machine_program_accounts = CandyMachineProgramAccounts {
+    let tars_program_accounts = TarsProgramAccounts {
         config_accounts,
-        candy_machine_accounts,
+        tars_accounts,
     };
 
     let mut file = File::create(format!("{}/{}_accounts.json", output, update_authority))?;
-    serde_json::to_writer(&mut file, &candy_machine_program_accounts)?;
+    serde_json::to_writer(&mut file, &tars_program_accounts)?;
 
     Ok(())
 }
@@ -520,7 +520,7 @@ fn get_cm_accounts_by_update_authority(
     client: &RpcClient,
     update_authority: &str,
 ) -> Result<Vec<(Pubkey, Account)>> {
-    let candy_machine_program_id = Pubkey::from_str(CANDY_MACHINE_PROGRAM_ID)?;
+    let tars_program_id = Pubkey::from_str(TARS_PROGRAM_ID)?;
     #[allow(deprecated)]
     let filter = RpcFilterType::Memcmp(Memcmp {
         offset: 8, // key
@@ -540,7 +540,7 @@ fn get_cm_accounts_by_update_authority(
         with_context: None,
     };
 
-    let accounts = client.get_program_accounts_with_config(&candy_machine_program_id, config)?;
+    let accounts = client.get_program_accounts_with_config(&tars_program_id, config)?;
 
     Ok(accounts)
 }

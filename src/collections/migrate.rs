@@ -15,7 +15,7 @@ pub struct MigrateArgs {
     pub async_client: AsyncRpcClient,
     pub keypair: Option<String>,
     pub mint_address: String,
-    pub candy_machine_id: Option<String>,
+    pub tars_id: Option<String>,
     pub mint_list: Option<String>,
     pub cache_file: Option<String>,
     pub retries: u8,
@@ -133,15 +133,15 @@ async fn set_and_verify(
 }
 
 pub async fn migrate_collection(args: MigrateArgs) -> AnyResult<()> {
-    if args.candy_machine_id.is_some() && args.mint_list.is_some() {
+    if args.tars_id.is_some() && args.mint_list.is_some() {
         return Err(anyhow!(
-            "Please specify either a candy machine id or an mint_list file, but not both."
+            "Please specify either a tars id or an mint_list file, but not both."
         ));
     }
 
-    if args.cache_file.is_some() && (args.candy_machine_id.is_some() || args.mint_list.is_some()) {
+    if args.cache_file.is_some() && (args.tars_id.is_some() || args.mint_list.is_some()) {
         return Err(anyhow!(
-            "Cannot use cache option with either a candy machine id or an mint_list file."
+            "Cannot use cache option with either a tars id or an mint_list file."
         ));
     }
 
@@ -152,9 +152,9 @@ pub async fn migrate_collection(args: MigrateArgs) -> AnyResult<()> {
     let solana_opts = parse_solana_config();
     let keypair = Arc::new(parse_keypair(args.keypair, solana_opts));
 
-    let mut mint_accounts = if let Some(candy_machine_id) = args.candy_machine_id {
-        println!("Using candy machine id to fetch mint list. . .");
-        get_mint_accounts(&args.client, &Some(candy_machine_id), 0, None, true)?
+    let mut mint_accounts = if let Some(tars_id) = args.tars_id {
+        println!("Using tars id to fetch mint list. . .");
+        get_mint_accounts(&args.client, &Some(tars_id), 0, None, true)?
     } else if let Some(mint_list) = args.mint_list {
         let f = File::open(mint_list)?;
         serde_json::from_reader(f)?
@@ -167,7 +167,7 @@ pub async fn migrate_collection(args: MigrateArgs) -> AnyResult<()> {
         cache.0.keys().map(|k| k.to_string()).collect()
     } else {
         return Err(anyhow!(
-            "Please specify either a candy machine id or an mint_list file."
+            "Please specify either a tars id or an mint_list file."
         ));
     };
 

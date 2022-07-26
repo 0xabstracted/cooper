@@ -22,7 +22,7 @@ use std::{
 };
 
 use crate::decode::get_metadata_pda;
-use crate::derive::derive_cmv2_pda;
+use crate::derive::derive_tars_pda;
 use crate::limiter::create_default_rate_limiter;
 use crate::parse::{is_only_one_option, parse_keypair};
 use crate::snapshot::get_cm_creator_accounts;
@@ -61,7 +61,7 @@ pub fn sign_all(
 
     if !is_only_one_option(creator, &mint_accounts_file) {
         return Err(anyhow!(
-            "Must specify exactly one of --candy-machine-id or --mint-data-dir"
+            "Must specify exactly one of --tars-id or --mint-data-dir"
         ));
     }
 
@@ -69,15 +69,15 @@ pub fn sign_all(
         if v2 {
             let creator_pubkey =
                 Pubkey::from_str(creator).expect("Failed to parse pubkey from creator!");
-            let cmv2_creator = derive_cmv2_pda(&creator_pubkey);
-            sign_candy_machine_accounts(
+            let tars_creator = derive_tars_pda(&creator_pubkey);
+            sign_tars_accounts(
                 client,
-                &cmv2_creator.to_string(),
+                &tars_creator.to_string(),
                 creator_keypair,
                 position,
             )?
         } else {
-            sign_candy_machine_accounts(client, creator, creator_keypair, position)?
+            sign_tars_accounts(client, creator, creator_keypair, position)?
         }
     } else if let Some(mint_accounts_file) = mint_accounts_file {
         let file = File::open(mint_accounts_file)?;
@@ -148,7 +148,7 @@ pub fn sign_mint_accounts(
     Ok(())
 }
 
-pub fn sign_candy_machine_accounts(
+pub fn sign_tars_accounts(
     client: &RpcClient,
     creator: &str,
     signing_creator: Keypair,
@@ -199,8 +199,8 @@ pub fn sign_candy_machine_accounts(
         });
 
     if !signed_at_least_one_account.load(Ordering::Relaxed) {
-        info!("No unverified metadata for this creator and candy machine.");
-        println!("No unverified metadata for this creator and candy machine.");
+        info!("No unverified metadata for this creator and tars.");
+        println!("No unverified metadata for this creator and tars.");
         return Ok(());
     }
 

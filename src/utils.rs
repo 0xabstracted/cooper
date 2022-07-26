@@ -8,7 +8,7 @@ use std::{ops::Add, sync::Arc};
 
 use crate::data::FoundError;
 use crate::wtf_errors::{
-    ANCHOR_ERROR, AUCTIONEER_ERROR, AUCTION_HOUSE_ERROR, CANDY_ERROR, METADATA_ERROR,
+    ANCHOR_ERROR, AUCTIONEER_ERROR, AUCTION_HOUSE_ERROR, TARS_ERROR, METADATA_ERROR,
 };
 
 pub fn send_and_confirm_transaction(
@@ -203,9 +203,9 @@ pub fn find_errors(hex_code: &str) -> Vec<FoundError> {
         });
     }
 
-    if let Some(e) = CANDY_ERROR.get(hex_code).cloned() {
+    if let Some(e) = TARS_ERROR.get(hex_code).cloned() {
         found_errors.push(FoundError {
-            domain: "Candy Machine".to_string(),
+            domain: "Tars".to_string(),
             message: e.to_string(),
         });
     }

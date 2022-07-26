@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Recipes - Metaboss</title>
+        <title>Recipes - Cooper</title>
 
 
         <!-- Custom HTML head -->
@@ -110,7 +110,7 @@
                         </button>
                     </div>
 
-                    <h1 class="menu-title">Metaboss</h1>
+                    <h1 class="menu-title">Cooper</h1>
 
                     <div class="right-buttons">
                         <a href="print.html" title="Print this book" aria-label="Print this book">
@@ -144,10 +144,10 @@
                     <main>
                         <h2 id="update-list-of-nft-metadata"><a class="header" href="#update-list-of-nft-metadata">Update List of NFT Metadata</a></h2>
 <ol>
-<li>Get your NFT mint list using <code>metaboss snapshot</code> or another tool.</li>
-<li>Decode all the metadata into files using <code>metaboss decode mint -L &lt;NFT_MINT_LIST_FILE&gt; --full -o &lt;DATA_FILES_DIR&gt;</code>.</li>
+<li>Get your NFT mint list using <code>cooper snapshot</code> or another tool.</li>
+<li>Decode all the metadata into files using <code>cooper decode mint -L &lt;NFT_MINT_LIST_FILE&gt; --full -o &lt;DATA_FILES_DIR&gt;</code>.</li>
 <li>Update the specific data you want changed in each file in the <code>&lt;DATA_FILES_DIR&gt;</code>.</li>
-<li>Update the NFTs with <code>metaboss update data-all -d &lt;DATA_FILES_DIR&gt;</code>.</li>
+<li>Update the NFTs with <code>cooper update data-all -d &lt;DATA_FILES_DIR&gt;</code>.</li>
 </ol>
 <p><strong>Note</strong>: many fields have specific <code>update &lt;field&gt;-all</code> commands which are easier to use as they don't require updating a bunch of metadata files manually. Check the <code>update</code> and <code>set</code> sections first to see if they have what you need.</p>
 

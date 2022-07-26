@@ -8,7 +8,7 @@ use crate::collections::{
     verify_nft_collection, MigrateArgs,
 };
 use crate::decode::{decode_master_edition, decode_metadata};
-use crate::derive::{get_cmv2_pda, get_edition_pda, get_generic_pda, get_metadata_pda};
+use crate::derive::{get_tars_pda, get_edition_pda, get_generic_pda, get_metadata_pda};
 use crate::find::find_missing_editions_process;
 use crate::mint::{mint_editions, mint_list, mint_missing_editions, mint_one};
 use crate::opt::*;
@@ -128,7 +128,7 @@ pub async fn process_collections(
         CollectionsSubcommands::Migrate {
             keypair,
             mint_address,
-            candy_machine_id,
+            tars_id,
             mint_list,
             cache_file,
             retries,
@@ -139,7 +139,7 @@ pub async fn process_collections(
                 async_client,
                 keypair,
                 mint_address,
-                candy_machine_id,
+                tars_id,
                 mint_list,
                 cache_file,
                 retries,
@@ -193,7 +193,7 @@ pub fn process_derive(commands: DeriveSubcommands) {
         DeriveSubcommands::Pda { seeds, program_id } => get_generic_pda(seeds, program_id),
         DeriveSubcommands::Metadata { mint_account } => get_metadata_pda(mint_account),
         DeriveSubcommands::Edition { mint_account } => get_edition_pda(mint_account),
-        DeriveSubcommands::CMV2Creator { candy_machine_id } => get_cmv2_pda(candy_machine_id),
+        DeriveSubcommands::TARSCreator { tars_id } => get_tars_pda(tars_id),
     }
 }
 

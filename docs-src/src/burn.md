@@ -7,5 +7,5 @@ Burn a single NFT by burning the SPL token and closing the associated token acco
 #### Usage
 
 ```bash
-metaboss burn one -k <OWNER_KEYPAIR> --account <MINT_ACCOUNT>
+cooper burn one -k <OWNER_KEYPAIR> --account <MINT_ACCOUNT>
 ```

@@ -7,13 +7,13 @@ Decodes a mint account's metadata into a JSON file. It accepts either a single a
 #### Usage
 
 ```bash
-metaboss decode mint --account <MINT_ACCOUNT> -o <OUPUT_DIRECTORY>
+cooper decode mint --account <MINT_ACCOUNT> -o <OUPUT_DIRECTORY>
 ```
 
 The command will write the metadata JSON file to the output directory with the mint account as the name: e.g. `CQNKXw1rw2eWwi812Exk4cKUjKuomZ2156STGRyXd2Mp.json`. The output option defaults to the current directory.
 
 ```bash
-metaboss decode mint --list-file <LIST_FILE> -o <OUPUT_DIRECTORY>
+cooper decode mint --list-file <LIST_FILE> -o <OUPUT_DIRECTORY>
 ```
 
 The JSON list file should be an array of mint accounts to be decoded:
